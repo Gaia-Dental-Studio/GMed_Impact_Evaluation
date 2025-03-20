@@ -68,7 +68,8 @@ with col2:
         
     intervention = capacity_yearly * number_clinic * capacity_allocation / 100 * number_provider
     
-    st.metric('Intervention Capacity (Yearly)', f'{intervention:,.0f}')
+    st.metric('Intervention Capacity (Yearly)', f'{intervention/20:,.0f}')
+    st.caption('Number of people can be serviced by the intervention')
     
     
 percentage_undiagnosed = undiagnosed_ratio[selected_disease] * 100
