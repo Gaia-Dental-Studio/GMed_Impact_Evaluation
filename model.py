@@ -25,7 +25,7 @@ class Model:
         fig.update_layout(
             xaxis=dict(tickmode='linear', tick0=2010, dtick=1),
             xaxis_title='Year',
-            yaxis_title='Prevalence (%)',
+            yaxis_title='$ Billion',
             template='plotly_white',
             
         )

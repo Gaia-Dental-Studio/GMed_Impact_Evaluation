@@ -9,6 +9,7 @@ st.title('GMedcc: Measuring Problem and Intervention Solution')
 
 prevalence_data = pd.read_csv('ncd_prevalence_cleaned.csv', index_col=0)
 economic_burden_data = pd.read_csv('ncd_economic_burden_cleaned.csv', index_col=0)
+economic_burden_undiagnosed_data = pd.read_csv('ncd_economic_burden_undiagnosed_cleaned.csv', index_col=0)
 provinces_data = pd.read_csv('provinces_population.csv')
 
 # convert provinces_data['Population'] by removing the "", get rid the commas and convert to int
@@ -23,7 +24,7 @@ old_ratio = 98665006 / 205360436
 old_population_all = 98665006
 
 capacity_yearly = 110400
-undiagnosed_ratio = {'Diabetes': 0.29, 'Hypertension': 0.63, 'Cancer': 0.7, 'Heart Disease': 0.82}
+undiagnosed_ratio = {'Diabetes': 0.29, 'Hypertension': 0.63, 'Heartproblems': 0.7, 'Stroke': 0.82}
 ratio_to_total_population = 1
 number_of_clinics_default = provinces_data['Number of Clinics'].values[-1] 
 number_of_clinics_default = int(number_of_clinics_default)
@@ -67,19 +68,26 @@ susceptible_population_multiple = (old_population_all + (old_population_all * 0.
 
 select_year_old_population = old_population + (old_population * 0.01 * (select_year - 2020))
 susceptible_population = select_year_old_population * prevalence_data[selected_disease].loc[select_year] / 100
-economic_burden = economic_burden_data[selected_disease].loc[select_year] * (susceptible_population / susceptible_population_multiple)
-economic_burden_per_capita = economic_burden / susceptible_population
+# NOTE: Economic Burden below only for the undiagnosed
+economic_burden = economic_burden_undiagnosed_data[selected_disease].loc[select_year] * (susceptible_population / susceptible_population_multiple)
 
 
+
+susceptible_population_diagnosed = susceptible_population * (1 - undiagnosed_ratio[selected_disease])
+susceptible_population_undiagnosed = susceptible_population * undiagnosed_ratio[selected_disease]
+
+economic_burden_per_capita = economic_burden / susceptible_population_undiagnosed
 
 col1, col2 = st.columns(2)
 
 with col1:
     st.metric('Population', f'{select_year_old_population:,.0f}', help='The population of Age 40+, which ratio is assumed to be same across all provinces. Source [2] for population data across provinces, and source [3] for distribution of age 40+ population')
-    st.metric('Total Economic Burden (Yearly)', f'${economic_burden*1000000000:,.0f}', help="Assumed to be contributed only by the population of age 40+ who are undiagnosed and susceptible. Source: [1]")
+    st.metric('Susceptible Population (Diagnosed)', f'{susceptible_population_diagnosed:,.0f}', help='Susceptible population (Diagnosed) is assumed to be representative to Self-Reported. The ratio of number of susceptible compared to Undiagnosed follows the ratio of Economic Burden (Self-Reported) to Economic Burden (Undiagnosed) in the selected NCD. Source: [1]')
+    st.metric('Total Economic Burden (Yearly)', f'${economic_burden*1000000000:,.0f}', help="Only represents for Undiagnosed cases of Age 40+ and susceptible. Source: [1]")
     
 with col2:
-    st.metric('Susceptible Population', f'{susceptible_population:,.0f}')
+    st.metric('Susceptible Population', f'{susceptible_population:,.0f}', help='Susceptible population calculated by multiplying the population with the prevalence of selected NCD. The number is assumed comprises of Self-Reported and Undiagnosed patients explained in Source [1] ')
+    st.metric('Susceptible Population (Undiagnosed)', f'{susceptible_population_undiagnosed:,.0f}', help='The ratio of number of susceptible compared to Self-Reported follows the ratio of Economic Burden (Self-Reported) to Economic Burden (Undiagnosed) in the selected NCD. Source: [1]')
     st.metric('Economic Burden per Capita (Yearly)', f'${economic_burden_per_capita*1000000000:,.0f}', help='Amount assumed to be equal across all provinces.')
     st.caption('Economic Burden per Capita = Total Economic Burden / Susceptible Population')
     
@@ -100,18 +108,24 @@ with col2:
         number_provider = st.number_input('Number of Medical Provider', 1)
         
     intervention = capacity_yearly * number_clinic * capacity_allocation / 100 * number_provider
+    intervention = intervention / 20
     
-    st.metric('Intervention Capacity (Yearly)', f'{intervention/20:,.0f}')
+    st.metric('Intervention Capacity (Yearly)', f'{intervention:,.0f}')
     st.caption('Number of people can be serviced by the intervention')
     
     
 percentage_undiagnosed = undiagnosed_ratio[selected_disease] * 100
-percentage_undiagnosed_after = percentage_undiagnosed * (1 - (intervention / susceptible_population))
+percentage_undiagnosed = np.round(percentage_undiagnosed, 0)
+percentage_undiagnosed_after = percentage_undiagnosed * (1 - (intervention / susceptible_population_undiagnosed))
 percentage_undiagnosed_after = percentage_undiagnosed_after.round(2)
+if percentage_undiagnosed_after < 0:
+    percentage_undiagnosed_after = 0
 delta = percentage_undiagnosed_after - percentage_undiagnosed
-delta = delta.round(2)
+delta = np.round(delta, 2)
 
-economic_burden_after = economic_burden - (economic_burden * (intervention / susceptible_population))
+economic_burden_after = economic_burden - (economic_burden * (intervention / susceptible_population_undiagnosed))
+if economic_burden_after < 0:
+    economic_burden_after = 0        
         
 col5, col6 = st.columns(2)
 with col5:
@@ -119,7 +133,7 @@ with col5:
     
     
 with col6:
-    st.metric('Percentage Undiagnosed after Internvention (%)', percentage_undiagnosed_after, delta=delta, delta_color='inverse')
+    st.metric('Percentage Undiagnosed after Intervention (%)', percentage_undiagnosed_after, delta=delta, delta_color='inverse')
 
 
 delta_economic_burden = (economic_burden_after - economic_burden) / economic_burden * 100
@@ -166,14 +180,15 @@ st.markdown("##### Economic Burden Before and After Intervention")
 
 col3, col4 = st.columns(2)
 
-value_max = (1000000000 * economic_burden ) * (1.93 / economic_burden)
+value_max = (1000000000 * economic_burden) * (0.49 / economic_burden) * (susceptible_population / susceptible_population_multiple)
 value_max = int(value_max)
 
 
 if selected_provinces == 'Indonesia (All Provinces)':
-    scale = 40000000
+    scale = 10000000
 else:
-    scale = 20000000 
+    scale = 5000000 
+
 
 with col3:
     pictogram = model.create_pictogram(economic_burden*1000000000, scale, value_max , emoji_symbol='💵', columns=7, vertical_shift=0.5, zoom_ratio=1.2)
