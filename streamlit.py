@@ -129,11 +129,11 @@ if economic_burden_after < 0:
         
 col5, col6 = st.columns(2)
 with col5:
-    st.metric('Percentage Undiagnosed (%)', percentage_undiagnosed)
+    st.metric('Percentage Undiagnosed (%)', percentage_undiagnosed, help='Calculated from the ratio of Undiagnosed to Total Self-Reported and Undiagnosed combined based on Source [1]')
     
     
 with col6:
-    st.metric('Percentage Undiagnosed after Intervention (%)', percentage_undiagnosed_after, delta=delta, delta_color='inverse')
+    st.metric('Percentage Undiagnosed after Intervention (%)', percentage_undiagnosed_after, delta=delta, delta_color='inverse', help='The decrease in percentage undiagnosed is based on number of patients that can be serviced by the intervention out of the total susceptible population (undiagnosed)')
 
 
 delta_economic_burden = (economic_burden_after - economic_burden) / economic_burden * 100
