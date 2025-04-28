@@ -1,0 +1,141 @@
+Country,Disease,Population ,Population Over 50,Number on Population Over 40,Prevalence % on Population Over 40,Prevalence # on Population Over 40,Economic Burden ($),% Undiagnosed out of Population,% Undiagnosed out of Population Over 40,Source,Year
+Indonesia,Hypertension,,,,,,,,,,2020
+Indonesia,Diabetes,,,,,,,,,,2020
+Indonesia,Heart Problem,,,,,,,,,,2020
+Indonesia,Stroke,,,,,,,,,,2020
+Indonesia,Dermentia,,,,,,,,,,2020
+Indonesia,Pregnancy,,,,,,,,,,2020
+Indonesia,Stunting,,,,,,,,,,2020
+Indonesia,Menopouse,,,,,,,,,,2020
+Australia,Hypertension,"26,974,026","9,440,909","6,800,000",25.2%,,not available,23%,47%,,2024
+Australia,Diabetes,"26,974,026","9,440,909","1,100,000",4.1%,,"$1,600,000,000",15%,not available,,2024
+Australia,Heart Problem,"26,974,026","9,440,909","2,600,000",9.6%,,not available,6.70%,not available,,2024
+Australia,Stroke,"26,974,026","9,440,909","1,100,000",4.1%,,"$414,000,000",not avalable,not available,,2024
+Australia,Dermentia,"26,974,026","9,440,909","500,000",1.9%,,not available,50%,not available,,2024
+Australia,Pregnancy,"26,974,026","9,440,909","18,000",0.1%,,not available,not available,not available,,2024
+Australia,Stunting,"26,974,026","9,440,909","37,400",0.1%,,not available,not available,not available,,2024
+Australia,Menopouse,"26,974,026","9,440,909","2,970,000",11.0%,,not available,not available,not available,,2024
+US,Hypertension,"347,275,807","119,392,268","146,000,000",42.0%,,"$198,300,000,000",6.10%,not available,,2024
+US,Diabetes,"347,275,807","119,392,268","50,000,000",14.4%,,"$143,900,000,000",3.40%,7%,,2024
+US,Heart Problem,"347,275,807","119,392,268","30,000,000",8.6%,,"$388,500,000,000",not available,5.9%,,2024
+US,Stroke,"347,275,807","119,392,268","7,920,000",2.3%,,not available,not available,not available,,2024
+US,Dermentia,"347,275,807","119,392,268","2,900,000",0.8%,,"$185,900,000,000",39.5,not available,,2024
+US,Pregnancy,"347,275,807","119,392,268","216,000",0.1%,,"$55,600,000,000",not available,not available,,2024
+US,Stunting,"347,275,807","119,392,268","3,700,000",1.1%,,not available,not available,not available,,2024
+US,Menopouse,"347,275,807","119,392,268","13,000,000",3.7%,,not available,not available,not available,,2024
+India,Hypertension,"1,463,865,525","225,649,000","120,000,000",8.2%,,"$4,500,000,000",26%,40%%,,2024
+India,Diabetes,"1,463,865,525","225,649,000","33,000,000",2.3%,,"$4,500,000,000",24.80%,not available,,2024
+India,Heart Problem,"1,463,865,525","225,649,000","33,600,000",2.3%,,"$6,000,000,000",68.70%,not available,,2024
+India,Stroke,"1,463,865,525","225,649,000","5,100,000",0.3%,,"$5,000,000,000",not available,not available,,2024
+India,Dermentia,"1,463,865,525","225,649,000","7,400,000",0.5%,,"$1,500,000,000",7.40%,not available,,2024
+India,Pregnancy,"1,463,865,525","225,649,000","24,032",0.0%,,"$7,000,000,000",not available,not available,,2024
+India,Stunting,"1,463,865,525","225,649,000","26,800,000",1.8%,,"$1,000,000,000",22.30%,not available,,2024
+India,Menopouse,"1,463,865,525","225,649,000","17,500,000",1.2%,,"$500,000,000",15%,not available,,2024
+Thailand,Hypertension,"71,619,863","21,510,730","7,700,000",10.8%,,"$1,000,000,000",48.50%,not available,,2024
+Thailand,Diabetes,"71,619,863","21,510,730","2,900,000",4.0%,,"$1,000,000,000",30.60%,not available,,2024
+Thailand,Heart Problem,"71,619,863","21,510,730","86,000,000",120.1%,120.08,"$1,500,000,000",3.54%,not available,,2024
+Thailand,Stroke,"71,619,863","21,510,730","564,000",0.8%,,"$1,200,000,000",not available,not available,,2024
+Thailand,Dermentia,"71,619,863","21,510,730","705,000",1.0%,,"$500,000,000",not available,not available,,2024
+Thailand,Pregnancy,"71,619,863","21,510,730","10,200",0.0%,,"$2,000,000,000",not available,not available,,2024
+Thailand,Stunting,"71,619,863","21,510,730","469,000",0.7%,,"$300,000,000",13.40%,not available,,2024
+Thailand,Menopouse,"71,619,863","21,510,730","5,500,000",7.7%,,"$200,000,000",not available,not available,,2024
+Vietnam,Hypertension,"101,598,527","25,790,000","16,400,000",16.1%,,"$144,000,000",5.30%,not available,,2024
+Vietnam,Diabetes,"101,598,527","25,790,000","4,300,000",4.2%,,"$108,000,000",51.50%,not available,,2024
+Vietnam,Heart Problem,"101,598,527","25,790,000","15,000,000",14.8%,,"$199,000,000",31%,not available,,2024
+Vietnam,Stroke,"101,598,527","25,790,000","925,000",0.9%,,"$150,000,000",not available,not available,,2024
+Vietnam,Dermentia,"101,598,527","25,790,000","5,600,000",5.5%,,"$50,000,000",not available,not available,,2024
+Vietnam,Pregnancy,"101,598,527","25,790,000","485,000",0.5%,,"$670,000,000",not available,not available,,2024
+Vietnam,Stunting,"101,598,527","25,790,000","1,560,000",1.5%,,"$11,000,000",19.60%,not available,,2024
+Vietnam,Menopouse,"101,598,527","25,790,000","1,750,000",1.7%,,not available,not available,not available,,2024
+Sri Lanka,Hypertension,"23,229,470","5,742,904","4,300,000",18.5%,,"$29,000,000",47%,not available,,2024
+Sri Lanka,Diabetes,"23,229,470","5,742,904","1,400,000",6.0%,,"$36,000,000",33%,not available,,2024
+Sri Lanka,Heart Problem,"23,229,470","5,742,904","478,800",2.1%,,"$134,000,000",3.80%,not available,,2024
+Sri Lanka,Stroke,"23,229,470","5,742,904","228,800",1.0%,,not available,not available,not available,,2024
+Sri Lanka,Dermentia,"23,229,470","5,742,904","87,819",0.4%,,not available,not available,not available,,2024
+Sri Lanka,Pregnancy,"23,229,470","5,742,904","576,000",2.5%,,"$212,000,000",not available,not available,,2024
+Sri Lanka,Stunting,"23,229,470","5,742,904","244,500",1.1%,,"$37,000,000",17.30%,not available,,2024
+Sri Lanka,Menopouse,"23,229,470","5,742,904","5,920,000",25.5%,,not available,not available,not available,,2024
+Malaysia,Hypertension,"34,100,000","7,500,000","7,000,000",20.5%,,"$900,000,000",11.90%,50%,National Health and Morbidity Survey 2019; WHO Malaysia Profile,2019
+Malaysia,Diabetes,"34,100,000","7,500,000","4,000,000",11.7%,,"$800,000,000",3%,40%,International Diabetes Federation; NHMS Malaysia 2019,2019
+Malaysia,Heart Problem,"34,100,000","7,500,000","500,000",1.5%,,"$2,500,000,000",3%,30%,WHO CVD Report; IJN Malaysia Stats,2019
+Malaysia,Stroke,"34,100,000","7,500,000","440,000",1.3%,,"$1,200,000,000",1.50%,20%,National Stroke Registry Malaysia; WHO Estimates,2019
+Malaysia,Dermentia,"34,100,000","7,500,000","260,000",0.8%,,"$2,000,000,000",5%,50%,Alzheimer’s Disease Foundation Malaysia; UN Aging Reports,2019
+Malaysia,Pregnancy,"34,100,000","7,500,000","456,000",1.3%,,"$1,000,000,000",0%,0%,Department of Statistics Malaysia; World Bank Fertility Reports,2019
+Malaysia,Stunting,"34,100,000","7,500,000","500,000",1.5%,,"$1,500,000,000",0%,0%,UNICEF Malaysia; Ministry of Health Nutrition Division,2019
+Malaysia,Menopouse,"34,100,000","7,500,000","3,700,000",10.9%,,"$60,000,000",0%,0%,Malaysia Population & Family Survey; Ministry of Women & Health Malaysia,2019
+Brunei Darussalam,Hypertension,"455,500","90,000","82,000",18.0%,,"$45,000,000",11.90%,40%,MOH Brunei 2016 NCD Survey; WHO Global Health Observatory,2016
+Brunei Darussalam,Diabetes,"455,500","90,000","37,000",8.1%,,"$30,000,000",3%,40%,Brunei Health Facts 2016; WHO Diabetes Profiles,2016
+Brunei Darussalam,Heart Problem,"455,500","90,000","11,000",2.4%,,"$50,000,000",2%,30%,Estimate based on WHO CVD data; IHD regional prevalence,2016
+Brunei Darussalam,Stroke,"455,500","90,000","2,500",0.5%,,"$10,000,000",1%,20%,Brunei Stroke Registry (est.); WHO Stroke Reports,2016
+Brunei Darussalam,Dermentia,"455,500","90,000","2,500",0.5%,,"$5,000,000",3%,40%,Estimate from global dementia rates and Brunei demographics,2016
+Brunei Darussalam,Pregnancy,"455,500","90,000","6,300",1.4%,,"$8,000,000",0%,0%,World Bank Data; Department of Economic Planning and Statistics Brunei,2016
+Brunei Darussalam,Stunting,"455,500","90,000",500,0.1%,,"$2,000,000",0%,0%,WHO Child Nutrition Report; UNICEF Brunei,2016
+Brunei Darussalam,Menopouse,"455,500","90,000","20,000",4.4%,,"$3,000,000",0%,0%,Estimate from Brunei Census and Demographics Reports,2016
+Singapure,Hypertension,"6,040,000","2,000,000","1,450,000",24.0%,,"$1,500,000,000",12%,50%,MOH Singapore National Population Health Survey 2020,2020
+Singapure,Diabetes,"6,040,000","2,000,000","460,000",7.6%,,"$1,800,000,000",3%,25%,Singapore Health Promotion Board; War on Diabetes Campaign,2020
+Singapure,Heart Problem,"6,040,000","2,000,000","250,000",4.1%,,"$2,500,000,000",3%,30%,Singapore Cardiac Society; WHO NCD Profiles,2020
+Singapure,Stroke,"6,040,000","2,000,000","90,000",1.5%,,"$500,000,000",0.50%,10%,National Neuroscience Institute Singapore; HealthHub,2020
+Singapure,Dermentia,"6,040,000","2,000,000","73,900",1.2%,,"$2,800,000,000",4%,30%,Alzheimer’s Disease Association Singapore; MOH reports,2020
+Singapure,Pregnancy,"6,040,000","2,000,000","33,541",0.6%,,"$100,000,000",0%,0%,Singapore Department of Statistics; World Bank,2020
+Singapure,Stunting,"6,040,000","2,000,000","3,000",0.1%,,"$1,000,000",0%,0%,WHO Global Nutrition Database; Health Promotion Board,2020
+Singapure,Menopouse,"6,040,000","2,000,000","1,000,000",16.6%,,"$40,000,000",0%,0%,Singapore Department of Statistics; Menopause Clinics Singapore,2020
+Ethiopia,Hypertension,"132,060,000","14,000,000","12,000,000",910.0%,910.00,,8%,25%,https://www.who.int/publications/i/item/9789240063405,2023
+Ethiopia,Diabetes,"132,060,000","14,000,000","2,300,000",180.0%,180.00,,0.60%,1.5%,https://idf.org/our-network/regions-members/africa/members/47-ethiopia.html,2023
+Ethiopia,Heart Problem,"132,060,000","14,000,000","1,000,000",80.0%,,,,0%,https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds),2023
+Ethiopia,Stroke,"132,060,000","14,000,000","200,000",15.0%,,,,0%,-,2023
+Ethiopia,Dermentia,"132,060,000","2,000,000","150,000",11.0%,,,,0%,https://www.alzint.org/resource/world-alzheimer-report-2023/,2023
+Ethiopia,Pregnancy,"132,060,000","14,000,000","4,000,000",300.0%,300.00,,0,0%,https://data.unicef.org/country/eth/,2023
+Ethiopia,Stunting,"132,060,000","14,000,000","6,200,000",470.0%,470.00,,0,0%,https://data.unicef.org/topic/nutrition/malnutrition/,2023
+Ethiopia,Menopouse,"132,060,000","14,000,000","6,500,000",490.0%,490.00,,0,0%,https://population.un.org/wpp/,2023
+Rwanda,Hypertension,"14,256,000","1,000,000","1,200,000",840.0%,840.00,,6,10,https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/ncd-risk-factors,2024
+Rwanda,Diabetes,"14,256,000","1,000,000","297,000",210.0%,210.00,,0.7,1.5,https://idf.org/our-network/regions-members/africa/members/49-rwanda.html,2024
+Rwanda,Heart Problem,"14,256,000","1,000,000","150,000",100.0%,100.00,,,,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7984234/,2024
+Rwanda,Stroke,"14,256,000","1,000,000",,,,,,,-,2024
+Rwanda,Dermentia,"14,256,000","200,000","30,000",21.0%,,,,,-,2024
+Rwanda,Pregnancy,"14,256,000","1,000,000","400,000",280.0%,280.00,,0,0,https://data.unicef.org/country/rwa/,2024
+Rwanda,Stunting,"14,256,000","1,000,000","800,000",560.0%,560.00,,0,0,https://data.unicef.org/topic/nutrition/malnutrition/,2024
+Rwanda,Menopouse,"14,256,000","1,000,000","600,000",420.0%,420.00,,0,0,https://population.un.org/wpp/,2024
+Chile,Hypertension,"19,764,771","5,500,000","4,000,000",2020.0%,"2,020.00",,6.5,12,https://www.minsal.cl/estadisticas-salud/,2024
+Chile,Diabetes,"19,764,771","5,500,000","1,747,100",880.0%,880.00,,2.5,5,https://idf.org/our-network/regions-members/south-and-central-america/members/36-chile.html,2024
+Chile,Heart Problem,"19,764,771","5,500,000","1,000,000",510.0%,510.00,,,,-,2024
+Chile,Stroke,"19,764,771","5,500,000","200,000",100.0%,100.00,,,,-,2024
+Chile,Dermentia,"19,764,771","2,000,000","180,000",91.0%,,,,,-,2024
+Chile,Pregnancy,"19,764,771","5,500,000","250,000",130.0%,130.00,,0,0,https://datos.gob.cl/,2024
+Chile,Stunting,"19,764,771","5,500,000","100,000",50.0%,,,0,0,https://data.unicef.org/country/chl/,2024
+Chile,Menopouse,"19,764,771","5,500,000","1,800,000",910.0%,910.00,,0,0,https://population.un.org/wpp/,2024
+Canada,Hypertension,"39,107,046","16,000,000","8,000,000",2050.0%,"2,050.00","$13,900,000,000",2,5,https://www.canada.ca/en/public-health/services/publications/diseases-conditions/high-blood-pressure.html,2022
+Canada,Diabetes,"39,107,046","16,000,000","3,700,000",940.0%,940.00,"$27,000,000,000",2.5,4,https://www.diabetes.ca/DiabetesCanadaWebsite/media/Advocacy-and-Policy/Backgrounder/2022_Backgrounder_Canada_English_FINAL.pdf,2022
+Canada,Heart Problem,"39,107,046","16,000,000","2,650,000",680.0%,680.00,"$21,200,000,000",,,https://www.heartandstroke.ca/what-we-do/media-centre/news-releases/2022-report,2022
+Canada,Stroke,"39,107,046","16,000,000","890,000",230.0%,230.00,"$3,600,000,000",,,https://www.heartandstroke.ca/what-we-do/media-centre/news-releases/2022-report,2022
+Canada,Dermentia,"39,107,046","7,700,000","771,939",200.0%,200.00,"$40,100,000,000",0.8,1.3,https://www.alzheimer.ca/en/about-dementia/what-dementia/dementia-numbers-canada,2022
+Canada,Pregnancy,"39,107,046","16,000,000","370,000",90.0%,,,0,0,https://www150.statcan.gc.ca/,2022
+Canada,Stunting,"39,107,046","16,000,000","50,000",10.0%,,,0,0,https://data.unicef.org/country/can/,2022
+Canada,Menopouse,"39,107,046","16,000,000","7,900,000",2020.0%,"2,020.00",,0,0,https://population.un.org/wpp/,2022
+Portugal,Hypertension,"10,223,349","3,500,000","3,000,000",2930.0%,"2,930.00",,12,20,https://www.pordata.pt/en,2024
+Portugal,Diabetes,"10,223,349","3,500,000","994,100",970.0%,970.00,,3,5,https://idf.org/our-network/regions-members/europe/members/148-portugal.html,2024
+Portugal,Heart Problem,"10,223,349","3,500,000","500,000",490.0%,490.00,,,,-,2024
+Portugal,Stroke,"10,223,349","3,500,000","200,000",200.0%,200.00,,,,-,2024
+Portugal,Dermentia,"10,223,349","2,000,000","193,500",190.0%,190.00,,,,-,2024
+Portugal,Pregnancy,"10,223,349","3,500,000","82,000",80.0%,,,0,0,https://www.ine.pt/,2024
+Portugal,Stunting,"10,223,349","3,500,000","5,000",5.0%,,,0,0,https://data.unicef.org/country/prt/,2024
+Portugal,Menopouse,"10,223,349","3,500,000","1,800,000",1760.0%,"1,760.00",,0,0,https://population.un.org/wpp/,2024
+Finlandia,Hypertension,"5,571,665","2,200,000","1,500,000",2690.0%,"2,690.00",,5,8,https://www.terveyskyla.fi/verisuoniterveyskeskus/en/diseases/blood-pressure,2024
+Finlandia,Diabetes,"5,571,665","2,200,000","500,000",900.0%,900.00,"$1,430,000,000",0.8,1.5,https://www.diabetes.fi/english/diabetes_in_finland,2024
+Finlandia,Heart Problem,"5,571,665","2,200,000","475,000",850.0%,850.00,,,,-,2024
+Finlandia,Stroke,"5,571,665","2,200,000","160,000",290.0%,290.00,,,,-,2024
+Finlandia,Dermentia,"5,571,665","1,350,000","200,000",360.0%,360.00,,6,10,https://muistiliitto.fi/en/,2024
+Finlandia,Pregnancy,"5,571,665","2,200,000","46,000",80.0%,,,0,0,https://findikaattori.fi/en/,2024
+Finlandia,Stunting,"5,571,665","2,200,000","2,000",4.0%,,,0,0,https://data.unicef.org/country/fin/,2024
+Finlandia,Menopouse,"5,571,665","2,200,000","1,000,000",1790.0%,"1,790.00",,0,0,https://population.un.org/wpp/,2024
+Romania,Hypertension,"19,015,088","6,500,000","7,000,000",3680.0%,"3,680.00",,10,15,https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/ncd-risk-factors,2024
+Romania,Diabetes,"19,015,088","6,500,000","1,199,000",630.0%,630.00,,1.3,2,https://idf.org/our-network/regions-members/europe/members/159-romania.html,2024
+Romania,Heart Problem,"19,015,088","6,500,000","800,000",420.0%,420.00,,,,-,2024
+Romania,Stroke,"19,015,088","6,500,000","280,000",150.0%,150.00,,,,-,2024
+Romania,Dermentia,"19,015,088","3,000,000","279,600",150.0%,150.00,,,,-,2024
+Romania,Pregnancy,"19,015,088","6,500,000","180,000",90.0%,,,0,0,https://insse.ro/cms/en,2024
+Romania,Stunting,"19,015,088","6,500,000","35,000",20.0%,,,0,0,https://data.unicef.org/country/rou/,2024
+Romania,Menopouse,"19,015,088","6,500,000","3,000,000",1580.0%,"1,580.00",,0,0,https://population.un.org/wpp/,2024
+,,,,,,,,,,,2024
+New Countries add here,,,,,,,,,,,
+Note:,,,,,,,,,,,
+"Untuk Indonesia, semua provinces, all done datanya",,,,,,,,,,,
