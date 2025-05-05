@@ -24,7 +24,7 @@ def app():
     old_population_all = 98665006
 
     capacity_yearly = 110400
-    undiagnosed_ratio = {'Diabetes': 0.29, 'Hypertension': 0.63, 'Heartproblems': 0.7, 'Stroke': 0.82}
+    undiagnosed_ratio = {'Diabetes': 0.047, 'Hypertension': 0.246, 'Heartproblems': 0.76, 'Stroke': 0.3}
     ratio_to_total_population = 1
     number_of_clinics_default = provinces_data['Number of Clinics'].values[-1] 
     number_of_clinics_default = int(number_of_clinics_default)
