@@ -7,9 +7,9 @@ from model import Model
 
 def app():
 
-    prevalence_data = pd.read_csv('ncd_prevalence_cleaned.csv', index_col=0)
-    economic_burden_data = pd.read_csv('ncd_economic_burden_cleaned.csv', index_col=0)
-    economic_burden_undiagnosed_data = pd.read_csv('ncd_economic_burden_undiagnosed_cleaned.csv', index_col=0)
+    prevalence_data = pd.read_csv('combined_ncd_prevalence_cleaned.csv', index_col=0)
+    economic_burden_data = pd.read_csv('combined_ncd_economic_burden_cleaned.csv', index_col=0)
+    economic_burden_undiagnosed_data = pd.read_csv('combined_ncd_economic_burden_undiagnosed_cleaned.csv', index_col=0)
     provinces_data = pd.read_csv('provinces_population.csv')
 
     # convert provinces_data['Population'] by removing the "", get rid the commas and convert to int
@@ -24,7 +24,7 @@ def app():
     old_population_all = 98665006
 
     capacity_yearly = 110400
-    undiagnosed_ratio = {'Diabetes': 0.047, 'Hypertension': 0.246, 'Heartproblems': 0.76, 'Stroke': 0.3}
+    undiagnosed_ratio = {'Diabetes': 0.047, 'Hypertension': 0.246, 'Heartproblems': 0.76, 'Stroke': 0.3, 'Dementia': 0.3, 'Pregnancy': 0.3, 'Stunting': 0.3, 'Menopouse': 0.3}
     ratio_to_total_population = 1
     number_of_clinics_default = provinces_data['Number of Clinics'].values[-1] 
     number_of_clinics_default = int(number_of_clinics_default)
