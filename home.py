@@ -5,7 +5,8 @@ import streamlit_2 as worldwide_model
 
 
 
-st.title('GMedcc: Measuring Problem and Intervention Solution')
+
+st.title('Size of the Problem and What We can Do Collectively')
 
 options = ["Indonesia", "Worldwide"]
 selection = st.pills("Select Base", options, selection_mode="single")

@@ -20,13 +20,13 @@ def app():
 
 
 
-    st.markdown('### How big the problem is and will be?')
+    st.markdown('### How Big is the Problem Projected to 2030?')
 
     selected_country = st.selectbox('Select Country', country_list)
 
 
 
-    selected_disease = st.selectbox('Select NCD', world_data[world_data['Country'] == selected_country]['Disease'].unique())
+    selected_disease = st.selectbox('Select the Non-Communicable Diseases (NCD) of Interest:', world_data[world_data['Country'] == selected_country]['Disease'].unique())
 
 
 
@@ -127,16 +127,25 @@ def app():
         
         col3, col4 = st.columns(2)
         with col3:
-            number_clinic = st.number_input('Number of Clinics',  min_value=1, value=number_of_clinics_default)
-            capacity_allocation = st.number_input('Capacity Allocation (%)', 20, help='Percentage of total capacity allocated for selected NCD (depends on demand trend)')
+            number_clinic = st.number_input('Number of Clinics*',  min_value=1, value=number_of_clinics_default)
+            
         with col4:
-            number_provider = st.number_input('Number of Medical Provider', 1)
+            number_provider = st.number_input('Medical Providers per Clinic', 1)
+            
+        st.caption('*New start-ups, acquired or repurposed from existing clinics') 
+            
+            
+            
+        capacity_allocation = st.number_input('Capacity Allocation (%) to NCD', 20, help='Percentage of total capacity allocated for selected NCD (depends on demand trend)')
+
+            
+        
             
         intervention = capacity_yearly * number_clinic * capacity_allocation / 100 * number_provider
         intervention = intervention / 20
         
         st.metric('Intervention Capacity (Yearly)', f'{intervention:,.0f}')
-        st.caption('Number of people can be serviced by the intervention')
+        st.caption('Number of people to be serviced by the intervention in a year')
         
         
     percentage_undiagnosed = undiagnosed_ratio[selected_disease] * 100
@@ -176,7 +185,7 @@ def app():
     with col10:
             st.metric('Economic Burden Reduction', f'${(economic_burden - economic_burden_after):,.0f}', delta=delta_economic_burden, delta_color='inverse')
 
-    st.markdown("### Visualizing Impact")
+    st.markdown("### Visualize Impact")
 
     st.markdown("##### % Undiagnosed Before and After Intervention")
 

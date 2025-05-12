@@ -1,0 +1,141 @@
+Country,Disease,Year,Population ,Population Over 50,Number on Population Over 40,Prevalence % on Population Over 40,Prevalence # on Population Over 40,Economic Burden ($),Economic Burden ($) - Undiagnosed over 40 only,% Undiagnosed out of Population,% Undiagnosed out of Population Over 40,Prevalence # Growth/Decrease Yearly (US$),Prevalence % Growth/Decrease Yearly,Economic Burden  # Growth/Decrease Yearly (US$),Economic Burden  % Growth/Decrease Yearly,Source
+Indonesia,Hypertension,2024,"282,477,584","60,000,000","70,000,000",50.0%,"47,500,000.00",$0,$0,0,0%,"1,200,000",1.1%,0.6 B,3.5%,"~70,000,000 (2018)​en.antaranews.com"
+Indonesia,Diabetes,2024,"282,477,584","60,000,000","19,465,102",15.0%,"20,000,000.00",$0,$0,2%,4%,"700,000",6%,0.35 B,7%,"19,465,102 (adult cases, 2021)​idf.org"
+Indonesia,Heart Problem,2024,"282,477,584","60,000,000","15,490,000",12.5,"9,500,000.00",$0,$0,0,0%,"500,000",2%,1.33 B,4%,"~15,490,000 (BPJS patients 2022)​liputan6.com"
+Indonesia,Stroke,2024,"282,477,584","60,000,000","2,800,000",3.0%,"1,900,000.00",$0,$0,0,0%,"100,000",1.5%,0.25 B,5%,"~2,800,000 (≈1% pop had stroke)"
+Indonesia,Dementia,2024,"282,477,584","60,000,000","1,200,000",1.0%,"1,200,000.00",$0,$0,—,0%,"75,000",3%,0.08 B,6%,"~1,200,000 (est. cases mid-2020s)"
+Indonesia,Pregnancy,2024,"282,477,584",0,"4,500,000",0.0%,0.00,$0,$0,0,0%,"-150,000",-0.9%,0.2 B,4%,"~4,500,000 (annual births, est.)"
+Indonesia,Stunting,2024,"282,477,584",0,"4,600,000",0.0%,0.00,$0,$0,0,0%,"-100,000",-1%,- 0.15 B,-2.5%,"~4,600,000 (≈21.6% of <5 in 2022)​worldbank.org"
+Indonesia,Menopouse,2024,"282,477,584","30,000,000","25,000,000",25.0%,"12,000,000.00",$0,$0,0,0%,"1,000,000",3%,0.15 B,3.5%,"~25,000,000 (women post-menopause)"
+Australia,Hypertension,2024,"26,974,026","9,440,909","6,800,000",25.2%,"11,868,571.44",$0,$0,23%,47%,0.1 M,0.5%,0.02 B,5%,~44% of Australians >45 have high blood pressure​nature.com (age-dependent increase noted).
+Australia,Diabetes,2024,"26,974,026","9,440,909","1,100,000",4.1%,"4,127,025.98","$1,600,000,000",$0,15%,0%,0.03 M,3%,0.01 B,6%,~1.8 million adults (20079) have diabetes​sciencedirect.com; ~37% undiagnosed (400k) in 2021.
+Australia,Heart Problem,2024,"26,974,026","9,440,909","2,600,000",9.6%,"3,236,883.12",$0,$0,6.70%,0%,5K,1%,0.03 B,4%,~1 in 8 Australian adults has some form of heart or vascular disease (estimated).
+Australia,Stroke,2024,"26,974,026","9,440,909","1,100,000",4.1%,"404,610.39","$414,000,000",$0,0,0%,2K,1%,0.005 B,2%,"~180,000 stroke survivors in 2020​demneuropsy.com.br (projected increase with aging)."
+Australia,Dementia,2024,"26,974,026","9,440,909","500,000",1.9%,"863,168.83",$0,$0,50%,0%,3K,2%,0.01 B,5%,"411,0000433,000 Australians live with dementia (2023)​aihw.gov.au."
+Australia,Pregnancy,2024,"26,974,026","9,440,909","18,000",0.1%,,,,,,-2K,-2%,-0.002 B,-1%,"~301,000 births in 2021 (fertility ~1.58) 0 pregnancy prevalence not applicable to >40."
+Australia,Stunting,2024,"26,974,026","9,440,909","37,400",0.1%,0.00,$0,$0,0,0%,,,,,(Not applicable 0 child stunting is very low in Australia).
+Australia,Menopouse,2024,"26,974,026","9,440,909","2,970,000",11.0%,"2,970,000.00",$0,$0,0,0%,5K,3%,0.0005 B,4%,~2.3 million Australian women are post-menopausal (all women ~50+; natural condition).
+US,Hypertension,2024,"347,275,807","119,392,268","146,000,000",42.0%,"83,300,000.00","$198,300,000,000",$0,6.10%,0%,"4,000,000",1%,5.5 B,3.5%,122.4 million US adults (46.7%) have hypertension (all ages ≥18)​heart.org; prevalence is higher in >40 (~49%).
+US,Diabetes,2024,"347,275,807","119,392,268","50,000,000",14.4%,"37,000,000.00","$143,900,000,000","$59,000,000,000",3.40%,7%,"5,000,000",7.5%,0.9 B,10%,38.4 million Americans (11.6% of total population) have diabetes​diabetes.org; ~1 in 5 are undiagnosed​cdc.gov. USA’s diabetes-related costs ≈ $295 billion/year​pubmed.ncbi.nlm.nih.gov.
+US,Heart Problem,2024,"347,275,807","119,392,268","30,000,000",8.6%,"30,000,000.00","$388,500,000,000",$0,0,5.9%,0.5 million,2.5%,3.5 B,5%,~30.3 million U.S. adults have diagnosed heart disease​healthline.com. Cardiovascular diseases cost ~$363B/year (direct & productivity)​cdc.gov​healthline.com.
+US,Stroke,2024,"347,275,807","119,392,268","7,920,000",2.3%,"8,500,000.00",$0,$0,0,0%,"50,000",1%,0.15 B,3.5%,~708 million Americans are stroke survivors (2.5% of population)​healthline.com. Annual stroke-related costs ~$46B (AHA estimate).
+US,Dementia,2024,"347,275,807","119,392,268","2,900,000",0.8%,"6,700,000.00","$185,900,000,000",$0,39.5,0%,0.12 million,2.7%,0.08 B,6%,~6.7 million Americans live with Alzheimer’s or other dementia​alzimpact.org. (Alzheimer’s alone cost $321B in 2022​alzimpact.org.)
+US,Pregnancy,2024,"347,275,807","119,392,268","216,000",0.1%,0.00,"$55,600,000,000",$0,0,0%,- 0.2 million,-1%,0.3 B,5%,~3.66 million births in 2021 (fertility ~1.64). Pregnancy metrics not applicable to population >40.
+US,Stunting,2024,"347,275,807","119,392,268","3,700,000",1.1%,0.00,$0,$0,0,0%,"-77,000",-0.9%,-0.1 B,-2%,(Not applicable 0 child stunting is not an issue in the US.)
+US,Menopouse,2024,"347,275,807","119,392,268","13,000,000",3.7%,"61,000,000.00",$0,$0,0,0%,"2,000,000",2.5%,0.5 B,3.5%,"~61 million U.S. women are 50+ (effectively all will experience menopause; considered a natural stage, not a disorder)."
+India,Hypertension,2024,"1,463,865,525","225,649,000","120,000,000",8.2%,"176,000,000.00","$4,500,000,000",$0,26%,40%,0,1%,1 B,2.5%,~1 in 4 Indian adults has hypertension (overall ~25% prevalence)​who.int; prevalence doubles in older ages (≈40%+ in >40).
+India,Diabetes,2024,"1,463,865,525","225,649,000","33,000,000",2.3%,"75,000,000.00","$4,500,000,000",$0,24.80%,4.5%,0.5 milion,1.5%,10 B,2.5%,74.2 million Indian adults (20079) have diabetes​statista.com. ~26% are undiagnosed (~19 million)​timesofindia.indiatimes.com.
+India,Heart Problem,2024,"1,463,865,525","225,649,000","33,600,000",2.3%,"63,000,000.00","$6,000,000,000",$0,68.70%,0%,"50,000",0.5%,2.5 B,1%,India’s rising heart disease prevalence (~54 million CVD cases in 2016) is significant​pmc.ncbi.nlm.nih.gov; ~15% of 40+ may have CVD (est.).
+India,Stroke,2024,"1,463,865,525","225,649,000","5,100,000",0.3%,"6,300,000.00","$5,000,000,000",$0,0,0%,"50,000",1%,1.7 B,4%,"Estimated ~6 million stroke survivors in India (approximate, given incidence and large population)."
+India,Dementia,2024,"1,463,865,525","225,649,000","7,400,000",0.5%,"8,800,000.00","$1,500,000,000",$0,7.40%,0%,"300,000",5%,13.3 B,4%,8.8 million Indians (7.4% of age ≥60) have dementia​timesofindia.indiatimes.com 0 a doubling from previous estimates.
+India,Pregnancy,2024,"1,463,865,525","225,649,000","24,032",0.0%,0.00,"$7,000,000,000",$0,0,0%,"120,000",-1%,0.5 B,3%,~24 million births per year (fertility ~2.0) 0 pregnancy metrics not tied to >40 population.
+India,Stunting,2024,"1,463,865,525","225,649,000","26,800,000",1.8%,0.00,"$1,000,000,000",$0,22.30%,0%,0,0%,$0.00,0%,31.7% of Indian children <5 are stunted (2019)​timesofindia.indiatimes.com. Not relevant to >40 population.
+India,Menopouse,2024,"1,463,865,525","225,649,000","17,500,000",1.2%,"136,000,000.00","$500,000,000",$0,15%,0%,"1,300,000",2%,0.5 B,3%,~136 million Indian women are 50+ (virtually all will experience menopause; not a pathological condition).
+Thailand,Hypertension,2024,"71,619,863","21,510,730","7,700,000",60.0%,"13,000,000.00","$1,000,000,000",$0,48.50%,25%,0,0%,0.1 B,2%,National health survey: >60% of older Thais hypertensive​journals.sagepub.com
+Thailand,Diabetes,2024,"71,619,863","21,510,730","2,900,000",15.0%,"13,000,000.00","$1,000,000,000",$0,30.60%,50%,0.18 million,2.6%,0.15 B,5.5%,IDF estimate: 8.3% adult prevalence (≈4.3 million cases)​novotech-cro.com​novotech-cro.com
+Thailand,Heart Problem,2024,"71,619,863","21,510,730","86,000,000",20.0%,"13,000,000.00","$1,500,000,000",$0,3.54%,0%,"10,000",1%,0.05 B,3%,No specific data; cardiovascular diseases rise with age (est.)
+Thailand,Stroke,2024,"71,619,863","21,510,730","564,000",5.0%,"13,000,000.00","$1,200,000,000",$0,0,0%,"2,000",0.5%,0.02 B,4%,No specific data; stroke survivors ~5% of older population (est.)
+Thailand,Dementia,2024,"71,619,863","21,510,730","705,000",2.0%,"13,000,000.00","$500,000,000",$0,0,0%,"3,000",4%,0.01 B,9%,No specific data; dementia prevalence ~2% of ≥40 pop (est.)
+Thailand,Pregnancy,2024,"71,619,863","21,510,730","10,200",0.0%,0.00,"$2,000,000,000",$0,0,0%,"10,000",-1.9%,-0.01 B,-2%,Women >40 rarely pregnant (very low prevalence)
+Thailand,Stunting,2024,"71,619,863","21,510,730","469,000",0.0%,0.00,"$300,000,000",$0,13.40%,0%,"37,000",0.9%,0.05 B,0%,(Stunting measured in children; not applicable to >40)
+Thailand,Menopouse,2024,"71,619,863","21,510,730","5,500,000",25.0%,"13,000,000.00","$200,000,000",$0,0,0%,"50,000",2%,0.02 B,3%,Approx. one-quarter of ≥40 population are post-menopausal (est.)
+Vietnam,Hypertension,2024,"101,598,527","25,790,000","16,400,000",16.1%,"7,200,000.00","$144,000,000",$0,5.30%,40%,0.78 milllion,1%,0.1 B,5%,>40% of ages 50069 have hypertension​thelancet.com​onlinelibrary.wiley.com
+Vietnam,Diabetes,2024,"101,598,527","25,790,000","4,300,000",4.2%,"1,800,000.00","$108,000,000",$0,51.50%,53%,0.21 miilion,7.6%,0.05 B,10%,5.5% adult prevalence in 2017 (3.5 million cases)​pubmed.ncbi.nlm.nih.gov; rising trend
+Vietnam,Heart Problem,2024,"101,598,527","25,790,000","15,000,000",14.8%,"2,700,000.00","$199,000,000",$0,31%,0%,"20,000",1.5%,0.03 B,4%,No specific data; estimated CVD prevalence in older adults
+Vietnam,Stroke,2024,"101,598,527","25,790,000","925,000",0.9%,"540,000.00","$150,000,000",$0,0,0%,"5,000",1%,0.02 b,5%,No specific data; estimated from regional stroke survivor rates
+Vietnam,Dementia,2024,"101,598,527","25,790,000","5,600,000",5.5%,"180,000.00","$50,000,000",$0,0,0%,"2,000",3.3%,0.01 b,7%,No specific data; dementia cases rising with aging (est.)
+Vietnam,Pregnancy,2024,"101,598,527","25,790,000","485,000",0.5%,0.00,"$670,000,000",$0,0,0%,"20,000",-1.3%,-0.01B,-1%,Negligible (few pregnancies above age 40)
+Vietnam,Stunting,2024,"101,598,527","25,790,000","1,560,000",1.5%,0.00,"$11,000,000",$0,19.60%,0%,77k,-1%,0.05 B,-3.5%,(Childhood issue 0 not applicable to >40 population)
+Vietnam,Menopouse,2024,"101,598,527","25,790,000","1,750,000",1.7%,"3,600,000.00",$0,$0,0,0%,0.15 M,2%,0.005 B,3%,Approx. one-fifth of ≥40 pop are post-menopausal women (est.)
+Sri Lanka,Hypertension,2024,"23,229,470","5,742,904","4,300,000",18.5%,"7,200,000.00","$29,000,000",$0,47%,40%,0.08 M,2.5%,0.05 B,5%,>40% of ages 50069 have hypertension​thelancet.com​onlinelibrary.wiley.com
+Sri Lanka,Diabetes,2024,"23,229,470","5,742,904","1,400,000",6.0%,"1,800,000.00","$36,000,000",$0,33%,53%,0.11 M,5.5%,0.03 B,7%,5.5% adult prevalence in 2017 (3.5 million cases)​pubmed.ncbi.nlm.nih.gov; rising trend
+Sri Lanka,Heart Problem,2024,"23,229,470","5,742,904","478,800",2.1%,"2,700,000.00","$134,000,000",$0,3.80%,0%,"5,000",1.5%,0.02 B,3%,No specific data; estimated CVD prevalence in older adults
+Sri Lanka,Stroke,2024,"23,229,470","5,742,904","228,800",1.0%,"540,000.00",$0,$0,0,0%,"1,000",-1%,0.005 B,2%,No specific data; estimated from regional stroke survivor rates
+Sri Lanka,Dementia,2024,"23,229,470","5,742,904","87,819",0.4%,"180,000.00",$0,$0,0,0%,"4,000",3%,0.005 B,6%,No specific data; dementia cases rising with aging (est.)
+Sri Lanka,Pregnancy,2024,"23,229,470","5,742,904","576,000",2.5%,0.00,"$212,000,000",$0,0,0%,"-4,000",-2%,-0.005 B,-1%,Negligible (few pregnancies above age 40)
+Sri Lanka,Stunting,2024,"23,229,470","5,742,904","244,500",1.1%,0.00,"$37,000,000",$0,17.30%,0%,"-4,000",-0.8%,-0.01 B,-5%,(Childhood issue 0 not applicable to >40 population)
+Sri Lanka,Menopouse,2024,"23,229,470","5,742,904","5,920,000",25.5%,"3,600,000.00",$0,$0,0,0%,"60,000",2.5%,0.01 B,4%,Approx. one-fifth of ≥40 pop are post-menopausal women (est.)
+Malaysia,Hypertension,2020,"97,338,579","10,000,000","18,000,000",40.0%,"3,500,000.00","$900,000,000",$0,11.90%,50%,0,0%,0.05b,1.5%,National Health and Morbidity Survey 2019; WHO Malaysia Profile
+Malaysia,Diabetes,2017,"97,338,579","10,000,000","18,000,000",10.0%,"1,750,000.00","$800,000,000",$0,3%,40%,0.29 m,8.6%,0.24 b,6.5%,International Diabetes Federation; NHMS Malaysia 2019
+Malaysia,Heart Problem,2020,"97,338,579","10,000,000","18,000,000",15.0%,"1,050,000.00","$2,500,000,000",$0,3%,30%,"10,000",1%,0.1 b,2%,WHO CVD Report; IJN Malaysia Stats
+Malaysia,Stroke,2020,"97,338,579","10,000,000","18,000,000",3.0%,"140,000.00","$1,200,000,000",$0,1.50%,20%,"1,500",0%,0.03 b,3%,National Stroke Registry Malaysia; WHO Estimates
+Malaysia,Dementia,2020,"97,338,579","10,000,000","18,000,000",1.0%,"70,000.00","$2,000,000,000",$0,5%,50%,"3,000",5%,0.01 b,7%,Alzheimer’s Disease Foundation Malaysia; UN Aging Reports
+Malaysia,Pregnancy,2024,"97,338,579",0,0,0.0%,0.00,"$1,000,000,000",$0,0%,0%,"-2,000",-190%,-0.005 b,-1%,Department of Statistics Malaysia; World Bank Fertility Reports
+Malaysia,Stunting,2024,"97,338,579",0,0,0.0%,0.00,"$1,500,000,000",$0,0%,0%,"3,500",0.5%,0.02 b,3.5%,UNICEF Malaysia; Ministry of Health Nutrition Division
+Malaysia,Menopouse,2024,"97,338,579","10,000,000","18,000,000",20.0%,"24,450,000.00","$60,000,000",$0,0%,0%,"20,000",3%,0.01 b,4%,Malaysia Population & Family Survey; Ministry of Women & Health Malaysia
+Brunei Darussalam,Hypertension,2016,"455,500","90,000","82,000",18.0%,"50,000.00","$45,000,000",$0,11.90%,40%,"1,500",0.5%,0.002 B,2%,MOH Brunei 2016 NCD Survey; WHO Global Health Observatory
+Brunei Darussalam,Diabetes,2016,"455,500","90,000","37,000",8.1%,"20,000.00","$30,000,000",$0,3%,40%,"1,300",1.8%,0.001 B,3.5%,Brunei Health Facts 2016; WHO Diabetes Profiles
+Brunei Darussalam,Heart Problem,2016,"455,500","90,000","11,000",2.4%,"15,000.00","$50,000,000",$0,2%,30%,100,1%,0.001 B,2%,Estimate based on WHO CVD data; IHD regional prevalence
+Brunei Darussalam,Stroke,2016,"455,500","90,000","2,500",0.5%,"2,000.00","$10,000,000",$0,1%,20%,50,0%,0.001 b,0%,Brunei Stroke Registry (est.); WHO Stroke Reports
+Brunei Darussalam,Dementia,2016,"455,500","90,000","2,500",0.5%,"1,000.00","$5,000,000",$0,3%,40%,50,5%,0.001 b,10%,Estimate from global dementia rates and Brunei demographics
+Brunei Darussalam,Pregnancy,2016,"455,500","90,000","6,300",1.4%,0.00,"$8,000,000",$0,0%,0%,-50,-1%,-0.001 b,-1%,World Bank Data; Department of Economic Planning and Statistics Brunei
+Brunei Darussalam,Stunting,2016,"455,500","90,000",500,0.1%,0.00,"$2,000,000",$0,0%,0%,0,0%,$0.00,0%,WHO Child Nutrition Report; UNICEF Brunei
+Brunei Darussalam,Menopouse,2016,"455,500","90,000","20,000",4.4%,0.00,"$3,000,000",$0,0%,0%,300,3%,0.001 b,3%,Estimate from Brunei Census and Demographics Reports
+Singapure,Hypertension,2020,"6,040,000","2,000,000","1,450,000",24.0%,"900,000.00","$1,500,000,000",$0,12%,50%,8M,1.3%,0.02 B,2%,MOH Singapore National Population Health Survey 2020
+Singapure,Diabetes,2020,"6,040,000","2,000,000","460,000",7.6%,"600,000.00","$1,800,000,000",$0,3%,25%,640,-0.7%,0.03 b,2.5%,Singapore Health Promotion Board; War on Diabetes Campaign
+Singapure,Heart Problem,2020,"6,040,000","2,000,000","250,000",4.1%,"200,000.00","$2,500,000,000",$0,3%,30%,"1,000",0%,0.05 b,1%,Singapore Cardiac Society; WHO NCD Profiles
+Singapure,Stroke,2020,"6,040,000","2,000,000","90,000",1.5%,"60,000.00","$500,000,000",$0,0.50%,10%,500,0%,0.01 b,2%,National Neuroscience Institute Singapore; HealthHub
+Singapure,Dementia,2020,"6,040,000","2,000,000","73,900",1.2%,"100,000.00","$2,800,000,000",$0,4%,30%,"7,500",6.5%,0.15 b,7.5%,Alzheimer’s Disease Association Singapore; MOH reports
+Singapure,Pregnancy,2020,"6,040,000","2,000,000","33,541",0.6%,0.00,"$100,000,000",$0,0%,0%,"5,000",3%,-0.005 b,-2%,Singapore Department of Statistics; World Bank
+Singapure,Stunting,2020,"6,040,000","2,000,000","3,000",0.1%,0.00,"$1,000,000",$0,0%,0%,0,0%,$0.00,0%,WHO Global Nutrition Database; Health Promotion Board
+Singapure,Menopouse,2020,"6,040,000","2,000,000","1,000,000",16.6%,"500,000.00","$40,000,000",$0,0%,0%,"20,000",4%,0.02 b,5%,Singapore Department of Statistics; Menopause Clinics Singapore
+Ethiopia,Hypertension,2023,"132,060,000","14,000,000","12,000,000",91.0%,"6,300,000.00",$0,$0,8%,25%,0.13 M,0.3%,0.005 B,5%,https://www.who.int/publications/i/item/9789240063405
+Ethiopia,Diabetes,2023,"132,060,000","14,000,000","2,300,000",18.0%,"750,000.00",$0,$0,0.60%,1.5%,25K,5.5%,0.002 B,10%,https://idf.org/our-network/regions-members/africa/members/47-ethiopia.html
+Ethiopia,Heart Problem,2023,"132,060,000","14,000,000","1,000,000",80.0%,"1,500,000.00",$0,$0,,0%,5k,2%,0.005 B,8%,https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)
+Ethiopia,Stroke,2023,"132,060,000","14,000,000","200,000",15.0%,"300,000.00",$0,$0,,0%,500,1%,0.001 B,5%,-
+Ethiopia,Dementia,2023,"132,060,000","2,000,000","150,000",11.0%,"1,500,000.00",$0,$0,,0%,400,2%,0.001 b,10%,https://www.alzint.org/resource/world-alzheimer-report-2023/
+Ethiopia,Pregnancy,2023,"132,060,000","14,000,000","4,000,000",30.0%,0.00,$0,$0,0,0%,50k,-1%,0.01 b,3%,https://data.unicef.org/country/eth/
+Ethiopia,Stunting,2023,"132,060,000","14,000,000","6,200,000",47.0%,0.00,$0,$0,0,0%,0,-0.63%,$0.00,-1.5%,https://data.unicef.org/topic/nutrition/malnutrition/
+Ethiopia,Menopouse,2023,"132,060,000","14,000,000","6,500,000",49.0%,"3,000,000.00",$0,$0,0,0%,15k,2%,0.001 b,5%,https://population.un.org/wpp/
+Rwanda,Hypertension,2024,"14,256,000","1,000,000","1,200,000",84.0%,"990,000.00",$0,$0,6,10,15K,0.3%,0.001 b,5%,https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/ncd-risk-factors
+Rwanda,Diabetes,2024,"14,256,000","1,000,000","297,000",21.0%,"297,000.00",$0,$0,0.7,1.5,22.5 K,"7,6%",0.0005 B,10%,https://idf.org/our-network/regions-members/africa/members/49-rwanda.html
+Rwanda,Heart Problem,2024,"14,256,000","1,000,000","150,000",10.0%,"165,000.00",$0,$0,,,1k,2%,0.005 B,10%,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7984234/
+Rwanda,Stroke,2024,"14,256,000","1,000,000",,0.0%,"33,000.00",$0,$0,,,200,1%,0.0002 B,5%,-
+Rwanda,Dementia,2024,"14,256,000","200,000","30,000",21.0%,"100,000.00",$0,$0,,,100,3%,$0.00,0%,-
+Rwanda,Pregnancy,2024,"14,256,000","1,000,000","400,000",28.0%,0.00,$0,$0,0,0,5k,-3%,-0.001 B,-2%,https://data.unicef.org/country/rwa/
+Rwanda,Stunting,2024,"14,256,000","1,000,000","800,000",56.0%,0.00,$0,$0,0,0,10k,-1.1%,-0.005 B,-4%,https://data.unicef.org/topic/nutrition/malnutrition/
+Rwanda,Menopouse,2024,"14,256,000","1,000,000","600,000",42.0%,"900,000.00",$0,$0,0,0,1k,3%,0.0001 B,5%,https://population.un.org/wpp/
+Chile,Hypertension,2024,"19,764,771","5,500,000","4,000,000",20.2%,"4,000,000.00",$0,$0,6.5,12,4 Million,-0.3%,0.001 b,1%,https://www.minsal.cl/estadisticas-salud/
+Chile,Diabetes,2024,"19,764,771","5,500,000","1,747,100",88.0%,"1,600,000.00",$0,$0,2.5,5,0.005 M,1%,0.05 b,3.5%,https://idf.org/our-network/regions-members/south-and-central-america/members/36-chile.html
+Chile,Heart Problem,2024,"19,764,771","5,500,000","1,000,000",51.0%,"1,200,000.00",$0,$0,,,0,0%,0.02 b,1.5%,-
+Chile,Stroke,2024,"19,764,771","5,500,000","200,000",10.0%,"240,000.00",$0,$0,,,0,-1%,0.005 b,1%,-
+Chile,Dementia,2024,"19,764,771","2,000,000","180,000",91.0%,"400,000.00",$0,$0,,,2.5k,1.3%,0.03b,6%,-
+Chile,Pregnancy,2024,"19,764,771","5,500,000","250,000",13.0%,0.00,$0,$0,0,0,-2k,-2%,-0.005 b,-2%,https://datos.gob.cl/
+Chile,Stunting,2024,"19,764,771","5,500,000","100,000",50.0%,0.00,$0,$0,0,0,0,0%,$0.00,0%,https://data.unicef.org/country/chl/
+Chile,Menopouse,2024,"19,764,771","5,500,000","1,800,000",91.0%,"4,000,000.00",$0,$0,0,0,5k,2%,0.01 b,3%,https://population.un.org/wpp/
+Canada,Hypertension,2022,"39,107,046","16,000,000","8,000,000",20.5%,"13,750,000.00","$13,900,000,000",$0,2,5,0,0%,0.1 B,1.5%,https://www.canada.ca/en/public-health/services/publications/diseases-conditions/high-blood-pressure.html
+Canada,Diabetes,2022,"39,107,046","16,000,000","3,700,000",94.0%,"6,250,000.00","$27,000,000,000",$0,2.5,4,0.05 M,1.3%,0.5 b,3.5%,https://www.diabetes.ca/DiabetesCanadaWebsite/media/Advocacy-and-Policy/Backgrounder/2022_Backgrounder_Canada_English_FINAL.pdf
+Canada,Heart Problem,2022,"39,107,046","16,000,000","2,650,000",68.0%,"5,000,000.00","$21,200,000,000",$0,,,0,1%,0.05 b,1%,https://www.heartandstroke.ca/what-we-do/media-centre/news-releases/2022-report
+Canada,Stroke,2022,"39,107,046","16,000,000","890,000",23.0%,"750,000.00","$3,600,000,000",$0,,,0,-1%,0.03 b,2%,https://www.heartandstroke.ca/what-we-do/media-centre/news-releases/2022-report
+Canada,Dementia,2022,"39,107,046","7,700,000","771,939",20.0%,"2,020,000.00","$40,100,000,000",$0,0.8,1.3,39k,6.5%,0.7 b,4%,https://www.alzheimer.ca/en/about-dementia/what-dementia/dementia-numbers-canada
+Canada,Pregnancy,2022,"39,107,046","16,000,000","370,000",90.0%,0.00,$0,$0,0,0,0,-1%,-0.01 b,0%,https://www150.statcan.gc.ca/
+Canada,Stunting,2022,"39,107,046","16,000,000","50,000",10.0%,0.00,$0,$0,0,0,0,0%,$0.00,0%,https://data.unicef.org/country/can/
+Canada,Menopouse,2022,"39,107,046","16,000,000","7,900,000",20.2%,"7,500,000.00",$0,$0,0,0,20k,2%,0.1 b,3%,https://population.un.org/wpp/
+Portugal,Hypertension,2024,"10,223,349","3,500,000","3,000,000",29.3%,"3,500,000.00",$0,$0,12,20,0,0%,0.01 B,1%,https://www.pordata.pt/en
+Portugal,Diabetes,2024,"10,223,349","3,500,000","994,100",97.0%,"1,000,000.00",$0,$0,3,5,0.01 M,0%,0.02 b,2%,https://idf.org/our-network/regions-members/europe/members/148-portugal.html
+Portugal,Heart Problem,2024,"10,223,349","3,500,000","500,000",49.0%,"750,000.00",$0,$0,,,0,-1%,$0.00,0%,-
+Portugal,Stroke,2024,"10,223,349","3,500,000","200,000",20.0%,"200,000.00",$0,$0,,,0,-2%,-0.005b,-1%,-
+Portugal,Dementia,2024,"10,223,349","2,000,000","193,500",19.0%,"400,000.00",$0,$0,,,3k,2%,0.03 b,5%,-
+Portugal,Pregnancy,2024,"10,223,349","3,500,000","82,000",80.0%,0.00,$0,$0,0,0,-1k,-2%,-0.002 b,-2%,https://www.ine.pt/
+Portugal,Stunting,2024,"10,223,349","3,500,000","5,000",5.0%,0.00,$0,$0,0,0,0,0%,$0.00,0%,https://data.unicef.org/country/prt/
+Portugal,Menopouse,2024,"10,223,349","3,500,000","1,800,000",17.6%,"2,500,000.00",$0,$0,0,0,5k,2%,0.01 b,2.5%,https://population.un.org/wpp/
+Finlandia,Hypertension,2024,"5,571,665","2,200,000","1,500,000",26.9%,"1,800,000.00",$0,$0,5,8,0,-0.3 %,$0.00,0%,https://www.terveyskyla.fi/verisuoniterveyskeskus/en/diseases/blood-pressure
+Finlandia,Diabetes,2024,"5,571,665","2,200,000","500,000",90.0%,"600,000.00","$1,430,000,000",$0,0.8,1.5,0.005 M,1.3%,0.02B,2%,https://www.diabetes.fi/english/diabetes_in_finland
+Finlandia,Heart Problem,2024,"5,571,665","2,200,000","475,000",85.0%,"450,000.00",$0,$0,,,0,1%,$0.00,0%,-
+Finlandia,Stroke,2024,"5,571,665","2,200,000","160,000",29.0%,"90,000.00",$0,$0,,,0,2%,-0.005 b,-2%,-
+Finlandia,Dementia,2024,"5,571,665","1,350,000","200,000",36.0%,"210,000.00",$0,$0,6,10,2k,2%,0.02 b,5%,https://muistiliitto.fi/en/
+Finlandia,Pregnancy,2024,"5,571,665","2,200,000","46,000",80.0%,0.00,$0,$0,0,0,0,0%,$0.00,0%,https://findikaattori.fi/en/
+Finlandia,Stunting,2024,"5,571,665","2,200,000","2,000",4.0%,0.00,$0,$0,0,0,0,0%,$0.00,0%,https://data.unicef.org/country/fin/
+Finlandia,Menopouse,2024,"5,571,665","2,200,000","1,000,000",17.9%,"1,500,000.00",$0,$0,0,0,3k,3%,0.01 b,3%,https://population.un.org/wpp/
+Romania,Hypertension,2024,"19,015,088","6,500,000","7,000,000",36.8%,"4,500,000.00",$0,$0,10,15,0,0.5%,0.02 B,5%,https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/ncd-risk-factors
+Romania,Diabetes,2024,"19,015,088","6,500,000","1,199,000",63.0%,"1,800,000.00",$0,$0,1.3,2,0,3%,0.01 B,6%,https://idf.org/our-network/regions-members/europe/members/159-romania.html
+Romania,Heart Problem,2024,"19,015,088","6,500,000","800,000",42.0%,"1,800,000.00",$0,$0,,,5k,1%,0.03 B,4%,-
+Romania,Stroke,2024,"19,015,088","6,500,000","280,000",15.0%,"360,000.00",$0,$0,,,2k,1.5%,0.005 B,2%,-
+Romania,Dementia,2024,"19,015,088","3,000,000","279,600",15.0%,"540,000.00",$0,$0,,,3k,2%,0.01 B,5%,-
+Romania,Pregnancy,2024,"19,015,088","6,500,000","180,000",90.0%,0.00,$0,$0,0,0,-2k,-2%,-0.002 B,-1%,https://insse.ro/cms/en
+Romania,Stunting,2024,"19,015,088","6,500,000","35,000",20.0%,0.00,$0,$0,0,0,0,0%,$0.00,0%,https://data.unicef.org/country/rou/
+Romania,Menopouse,2024,"19,015,088","6,500,000","3,000,000",15.8%,"4,500,000.00",$0,$0,0,0,5k,3%,0.005 B,4%,https://population.un.org/wpp/
+,,,,,,,,,,,,,,,,
+New Countries add here,,,,,,,,,,,,,,,,
+Note:,,,,,,,,,,,,,,,,
+"Untuk Indonesia, semua provinces, all done datanya",,,,,,,,,,,,,,,,

@@ -30,9 +30,9 @@ def app():
     number_of_clinics_default = int(number_of_clinics_default)
 
 
-    st.markdown('### How big the problem is and will be?')
+    st.markdown('### How Big is the Problem Projected to 2030?')
 
-    selected_disease = st.selectbox('Select NCD', prevalence_data.columns, help="Source: [1] Indonesia's 2020 NCD Prevalence and Economic Burden Data")
+    selected_disease = st.selectbox('Select the Non-Communicable Diseases (NCD) of Interest:', prevalence_data.columns, help="Source: [1] Indonesia's 2020 NCD Prevalence and Economic Burden Data")
 
 
     prevalence_forecast = model.line_chart(prevalence_data, selected_disease)
@@ -42,6 +42,12 @@ def app():
     st.plotly_chart(prevalence_forecast)
 
     st.plotly_chart(economic_burden_forecast)
+    
+    st.divider()
+    
+    st.markdown('### Introducing our Intervention Solution: GMedCC Health Stores')
+    st.write('GMedCC Health Stores offer low footprint and set up costs, with maximum connectivity')
+
 
 
     provinces_names = provinces_data['Province'].unique()
@@ -102,16 +108,24 @@ def app():
         
         col3, col4 = st.columns(2)
         with col3:
-            number_clinic = st.number_input('Number of Clinics',  min_value=1, value=number_of_clinics_default)
-            capacity_allocation = st.number_input('Capacity Allocation (%)', 20, help='Percentage of total capacity allocated for selected NCD (depends on demand trend)')
+            number_clinic = st.number_input('Number of Clinics*',  min_value=1, value=number_of_clinics_default)
+            
         with col4:
-            number_provider = st.number_input('Number of Medical Provider', 1)
+            number_provider = st.number_input('Medical Providers per Clinic', 1)
+            
+        st.caption('*New start-ups, acquired or repurposed from existing clinics') 
+            
+            
+            
+        capacity_allocation = st.number_input('Capacity Allocation (%) to NCD', 20, help='Percentage of total capacity allocated for selected NCD (depends on demand trend)')
+
+            
             
         intervention = capacity_yearly * number_clinic * capacity_allocation / 100 * number_provider
         intervention = intervention / 20
         
         st.metric('Intervention Capacity (Yearly)', f'{intervention:,.0f}')
-        st.caption('Number of people can be serviced by the intervention')
+        st.caption('Number of people to be serviced by the intervention in a year')
         
         
     percentage_undiagnosed = undiagnosed_ratio[selected_disease] * 100
@@ -151,7 +165,7 @@ def app():
     with col10:
             st.metric('Economic Burden Reduction', f'${(economic_burden - economic_burden_after)*1000000000:,.0f}', delta=delta_economic_burden, delta_color='inverse')
 
-    st.markdown("### Visualizing Impact")
+    st.markdown("### Visualize Impact")
 
     st.markdown("##### % Undiagnosed Before and After Intervention")
 
@@ -181,7 +195,7 @@ def app():
     col3, col4 = st.columns(2)
 
     value_max = (1000000000 * economic_burden) * (0.49 / economic_burden) * (susceptible_population / susceptible_population_multiple)
-    value_max = int(value_max)
+    value_max = int(value_max) if value_max > 0 else 10000000
 
 
     if selected_provinces == 'Indonesia (All Provinces)':
