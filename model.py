@@ -32,6 +32,34 @@ class Model:
         
         return fig
     
+    
+    def line_chart_economy_disease_compare(self, data, columns=None, top=5):
+        # If columns is None, use all columns
+        if columns is None:
+            columns = data.columns.tolist()
+
+        # Compute total for each column and select top N
+        top_columns = data[columns].sum().sort_values(ascending=False).head(top).index.tolist()
+
+        # Prepare data in long format
+        df_long = data[top_columns].reset_index().melt(id_vars='index', value_vars=top_columns,
+                                                        var_name='NCD', value_name='Economic Burden')
+
+        # Create line chart
+        fig = px.line(df_long, x='index', y='Economic Burden', color='NCD',
+                    title=f'Top {top} Economic Burden (in $ Billion)',
+                    labels={'index': 'Year', 'Economic Burden': '$ Billion'})
+
+        fig.update_layout(
+            xaxis=dict(tickmode='linear', tick0=2010, dtick=1),
+            xaxis_title='Year',
+            yaxis_title='$ Billion',
+            template='plotly_white',
+        )
+
+        return fig
+
+    
     def create_pie_chart(self, labels, values, colors=None):
         if colors is None:
             # Default colors if not provided

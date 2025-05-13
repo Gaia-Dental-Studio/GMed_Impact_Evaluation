@@ -43,6 +43,8 @@ def app():
 
     st.plotly_chart(economic_burden_forecast)
     
+    st.plotly_chart(model.line_chart_economy_disease_compare(economic_burden_data, top=5), use_container_width=True)
+    
     st.divider()
     
     st.markdown('### Introducing our Intervention Solution: GMedCC Health Stores')
@@ -211,6 +213,27 @@ def app():
     with col4:
         pictogram = model.create_pictogram(economic_burden_after*1000000000, scale, value_max, emoji_symbol='💵', columns=7, vertical_shift=0.5, zoom_ratio=1.2) 
         st.plotly_chart(pictogram, use_container_width=True, key='after_intervention')
+        
+        
+
+    st.markdown("### Opportunities to Collaborate in Closing the Healthcare Gap")
+    st.markdown(
+        "There are numerous ways you can join us in addressing this healthcare disparity and "
+        "alleviating the global economic burden."
+    )
+
+    st.markdown("- **Start or Invest in Health Stores**  \n"
+                "  Become part of the solution.")
+
+    st.markdown("- **Partner with Us as Healthcare Professionals**  \n"
+                "  Collaborate with us to make a difference.")
+
+    st.markdown("- **Donate Genia.AI Devices for Early Detection**  \n"
+                "  Support our mission to enhance early diagnosis.")
+
+    st.markdown("- **Invest in Us to Accelerate Our Solutions**  \n"
+                "  Help us expedite the development of our innovative approaches.")
+
         
     st.divider()
 
