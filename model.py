@@ -47,7 +47,7 @@ class Model:
 
         # Create line chart
         fig = px.line(df_long, x='index', y='Economic Burden', color='NCD',
-                    title=f'Top {top} Economic Burden (in $ Billion)',
+                    title=f'Economic Burden of NCDs Compared (in $ Billion)',
                     labels={'index': 'Year', 'Economic Burden': '$ Billion'})
 
         fig.update_layout(
@@ -57,8 +57,7 @@ class Model:
             template='plotly_white',
         )
 
-        return fig
-
+        return fig, df_long
     
     def create_pie_chart(self, labels, values, colors=None):
         if colors is None:

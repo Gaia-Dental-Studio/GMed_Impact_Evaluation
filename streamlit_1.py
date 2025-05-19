@@ -7,9 +7,9 @@ from model import Model
 
 def app():
 
-    prevalence_data = pd.read_csv('combined_ncd_prevalence_cleaned.csv', index_col=0)
-    economic_burden_data = pd.read_csv('combined_ncd_economic_burden_cleaned.csv', index_col=0)
-    economic_burden_undiagnosed_data = pd.read_csv('combined_ncd_economic_burden_undiagnosed_cleaned.csv', index_col=0)
+    prevalence_data = pd.read_csv('indonesia_ncd_prevalence_cleaned.csv', index_col=0)
+    economic_burden_data = pd.read_csv('indonesia_ncd_economic_burden_cleaned.csv', index_col=0)
+    economic_burden_undiagnosed_data = pd.read_csv('indonesia_ncd_economic_burden_undiagnosed_cleaned.csv', index_col=0)
     provinces_data = pd.read_csv('provinces_population.csv')
 
     # convert provinces_data['Population'] by removing the "", get rid the commas and convert to int
@@ -18,21 +18,29 @@ def app():
 
 
     model = Model()
-    old_population = 98665006
-    old_ratio = 98665006 / 205360436
+    
+    old_population = 32424300.0
+    old_ratio = 32424300.0 / 282477584.0
 
-    old_population_all = 98665006
+    old_population_all = 32424300.0
 
     capacity_yearly = 110400
-    undiagnosed_ratio = {'Diabetes': 0.047, 'Hypertension': 0.246, 'Heartproblems': 0.76, 'Stroke': 0.3, 'Dementia': 0.3, 'Pregnancy': 0.3, 'Stunting': 0.3, 'Menopouse': 0.3}
+    undiagnosed_ratio = {'Diabetes': 0.75, 'Hypertension': 0.6667, 'Heart Problem': 0.93, 'Stroke': 0.887, 
+                        #  'Dementia': 0.3, 'Pregnancy': 0.3, 'Stunting': 0.3, 'Menopouse': 0.3
+                         }
+    
     ratio_to_total_population = 1
+    
+    
     number_of_clinics_default = provinces_data['Number of Clinics'].values[-1] 
     number_of_clinics_default = int(number_of_clinics_default)
+    
+    
 
 
-    st.markdown('### How Big is the Problem Projected to 2030?')
+    st.markdown('### How Big is the Problem Projected to 2034?')
 
-    selected_disease = st.selectbox('Select the Non-Communicable Diseases (NCD) of Interest:', prevalence_data.columns, help="Source: [1] Indonesia's 2020 NCD Prevalence and Economic Burden Data")
+    selected_disease = st.selectbox('Select the Non-Communicable Diseases (NCD) of Interest:', prevalence_data.columns)
 
 
     prevalence_forecast = model.line_chart(prevalence_data, selected_disease)
@@ -43,7 +51,14 @@ def app():
 
     st.plotly_chart(economic_burden_forecast)
     
-    st.plotly_chart(model.line_chart_economy_disease_compare(economic_burden_data, top=5), use_container_width=True)
+    st.markdown('#### At a Glance: Economic Burden of NCDs Compared')
+    # tab1,tab2 = st.tabs(['Economic Burden of NCDs', 'Economic Burden of NCDs (Undiagnosed)'])
+    fig_compare, df_long = model.line_chart_economy_disease_compare(economic_burden_data, columns=None, top=5)
+    st.plotly_chart(fig_compare, use_container_width=True)
+    
+    # st.dataframe(df_long, use_container_width=True, hide_index=True)
+    df_long.to_csv('economic_burden_compare.csv', index=False)
+    
     
     st.divider()
     
@@ -69,12 +84,12 @@ def app():
         ratio_to_total_population = old_population / (provinces_data['Population'].sum() * old_ratio)
         number_of_clinics_default = provinces_data[provinces_data['Province'] == selected_provinces]['Number of Clinics'].values[0] 
 
-    select_year = st.slider('Select Year', 2010, 2030, 2020, 1)
+    select_year = st.slider('Select Year', 2014, 2034, 2024, 1)
 
-    susceptible_population_multiple = (old_population_all + (old_population_all * 0.01 * (select_year - 2020))) * prevalence_data[selected_disease].loc[select_year] / 100
+    susceptible_population_multiple = (old_population_all + (old_population_all * 0.016 * (select_year - 2024))) * prevalence_data[selected_disease].loc[select_year] / 100
 
 
-    select_year_old_population = old_population + (old_population * 0.01 * (select_year - 2020))
+    select_year_old_population = old_population + (old_population * 0.016 * (select_year - 2024))
     susceptible_population = select_year_old_population * prevalence_data[selected_disease].loc[select_year] / 100
     # NOTE: Economic Burden below only for the undiagnosed
     economic_burden = economic_burden_undiagnosed_data[selected_disease].loc[select_year] * (susceptible_population / susceptible_population_multiple)
@@ -90,13 +105,13 @@ def app():
 
     with col1:
         st.metric('Population', f'{select_year_old_population:,.0f}', help='The population of Age 40+, which ratio is assumed to be same across all provinces. Source [2] for population data across provinces, and source [3] for distribution of age 40+ population')
-        st.metric('Susceptible Population (Diagnosed)', f'{susceptible_population_diagnosed:,.0f}', help='Susceptible population (Diagnosed) is assumed to be representative to Self-Reported. The ratio of number of susceptible compared to Undiagnosed follows the ratio of Economic Burden (Self-Reported) to Economic Burden (Undiagnosed) in the selected NCD. Source: [1]')
-        st.metric('Total Economic Burden (Yearly)', f'${economic_burden*1000000000:,.0f}', help="Only represents for Undiagnosed cases of Age 40+ and susceptible. Source: [1]")
+        st.metric('Susceptible Population (Diagnosed)', f'{susceptible_population_diagnosed:,.0f}')
+        st.metric('Total Economic Burden (Yearly)', f'${economic_burden:,.0f}', help="Only represents for Undiagnosed cases of Age 40+ and susceptible proportionally to the population of Age 40+")
         
     with col2:
-        st.metric('Susceptible Population', f'{susceptible_population:,.0f}', help='Susceptible population calculated by multiplying the population with the prevalence of selected NCD. The number is assumed comprises of Self-Reported and Undiagnosed patients explained in Source [1] ')
-        st.metric('Susceptible Population (Undiagnosed)', f'{susceptible_population_undiagnosed:,.0f}', help='The ratio of number of susceptible compared to Self-Reported follows the ratio of Economic Burden (Self-Reported) to Economic Burden (Undiagnosed) in the selected NCD. Source: [1]')
-        st.metric('Economic Burden per Capita (Yearly)', f'${economic_burden_per_capita*1000000000:,.0f}', help='Amount assumed to be equal across all provinces.')
+        st.metric('Susceptible Population', f'{susceptible_population:,.0f}', )
+        st.metric('Susceptible Population (Undiagnosed)', f'{susceptible_population_undiagnosed:,.0f}', )
+        st.metric('Economic Burden per Capita (Yearly)', f'${economic_burden_per_capita:,.0f}', help='Amount assumed to be equal across all provinces.')
         st.caption('Economic Burden per Capita = Total Economic Burden / Susceptible Population')
         
     st.markdown('### Introducing our Intervention Solution')
@@ -104,7 +119,7 @@ def app():
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image('clinic.png', use_container_width=True)
+        st.image('clinic_2.png', use_container_width=True)
         
     with col2:
         
@@ -145,7 +160,7 @@ def app():
             
     col5, col6 = st.columns(2)
     with col5:
-        st.metric('Percentage Undiagnosed (%)', percentage_undiagnosed, help='Calculated from the ratio of Undiagnosed to Total Self-Reported and Undiagnosed combined based on Source [1]')
+        st.metric('Percentage Undiagnosed (%)', percentage_undiagnosed, )
         
         
     with col6:
@@ -158,14 +173,14 @@ def app():
     col7, col8 = st.columns(2)
 
     with col7:
-        st.metric('Total Economic Burden (Before)', f'${economic_burden*1000000000:,.0f}')
+        st.metric('Total Economic Burden (Before)', f'${economic_burden:,.0f}')
     with col8:
-        st.metric('Total Economic Burden (After)', f'${economic_burden_after*1000000000:,.0f}')
+        st.metric('Total Economic Burden (After)', f'${economic_burden_after:,.0f}')
         
     col10, col11 = st.columns(2)
 
     with col10:
-            st.metric('Economic Burden Reduction', f'${(economic_burden - economic_burden_after)*1000000000:,.0f}', delta=delta_economic_burden, delta_color='inverse')
+            st.metric('Economic Burden Reduction', f'${(economic_burden - economic_burden_after):,.0f}', delta=delta_economic_burden, delta_color='inverse')
 
     st.markdown("### Visualize Impact")
 
@@ -194,24 +209,28 @@ def app():
 
     st.markdown("##### Economic Burden Before and After Intervention")
 
+    # st.write(economic_burden)
+    # st.write(susceptible_population)
+    # st.write(susceptible_population_multiple)
+
     col3, col4 = st.columns(2)
 
-    value_max = (1000000000 * economic_burden) * (0.49 / economic_burden) * (susceptible_population / susceptible_population_multiple)
+    value_max = (economic_burden) * (susceptible_population / susceptible_population_multiple)
     value_max = int(value_max) if value_max > 0 else 10000000
 
 
     if selected_provinces == 'Indonesia (All Provinces)':
-        scale = 10000000
+        scale = 40000000
     else:
-        scale = 5000000 
+        scale = 10000000 
 
 
     with col3:
-        pictogram = model.create_pictogram(economic_burden*1000000000, scale, value_max , emoji_symbol='💵', columns=7, vertical_shift=0.5, zoom_ratio=1.2)
+        pictogram = model.create_pictogram(economic_burden, scale, value_max , emoji_symbol='💵', columns=7, vertical_shift=0.5, zoom_ratio=1.2)
         st.plotly_chart(pictogram, use_container_width=True, key='before_intervention')
     
     with col4:
-        pictogram = model.create_pictogram(economic_burden_after*1000000000, scale, value_max, emoji_symbol='💵', columns=7, vertical_shift=0.5, zoom_ratio=1.2) 
+        pictogram = model.create_pictogram(economic_burden_after, scale, value_max, emoji_symbol='💵', columns=7, vertical_shift=0.5, zoom_ratio=1.2) 
         st.plotly_chart(pictogram, use_container_width=True, key='after_intervention')
         
         
@@ -239,6 +258,9 @@ def app():
 
 
     st.markdown('##### References')
+    
+    st.info('This model calculator is developed based upon various reliable data sources ranged from year of 2010 to 2024. References detailed as follows')
+
 
     # write using st.write 
     # Tenggara, B. P. S. P. S. (n.d.). Jumlah Penduduk Menurut Provinsi di Indonesia (ribu),  2019-2023 - Tabel Statistik. Badan Pusat Statistik Provinsi Sulawesi Tenggara. https://sultra.bps.go.id/id/statistics-table/1/NDc3OCMx/jumlah-penduduk-menurut-provinsi-di-indonesia--ribu----2019-2023.html
@@ -247,7 +269,7 @@ def app():
     # BPS (Badan Pusat Statistik) Indonesia. (2020). Statistik Penduduk Indonesia 2020. Badan Pusat Statistik. https://www.bps.go.id/publication/2021/04/27/3c4e8d6f9b5a2f3d7c9a4d1a/statistik-penduduk-indonesia-2020.html
 
 
-    st.link_button("[1] Indonesia's 2020 NCD Prevalence and Economic Burden Data", "https://pmc.ncbi.nlm.nih.gov/articles/PMC4051736/", type='secondary')
+    # st.link_button("[1] Indonesia's 2020 NCD Prevalence and Economic Burden Data", "https://pmc.ncbi.nlm.nih.gov/articles/PMC4051736/", type='secondary')
     # write using st.write
     st.link_button("[2] BPS (Badan Pusat Statistik) Indonesia Population Across Provinces - 2020", "https://sultra.bps.go.id/id/statistics-table/1/NDc3OCMx/jumlah-penduduk-menurut-provinsi-di-indonesia--ribu----2019-2023.html", type='secondary')
     st.link_button("[3] BPS (Badan Pusat Statistik) Indonesia Population by Age Group - 2020", "https://www.bps.go.id/en/statistics-table/2/NzE1IzI=/total-population-of-age-15-and-above-by-age-group.html", type='secondary')

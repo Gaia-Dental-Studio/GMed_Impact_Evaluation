@@ -1,0 +1,90 @@
+Country,Disease,Year,Population ,Population 40+,Prevalence % 40+,Prevalence # 40+,Economic Burden ($),% Undiagnosed Susceptible Population 40+,% Undiagnosed Population 40+,Undiagnosed : Diagnosed Ratio,Prevalence # Growth Yearly,Prevalence % Growth Yearly,Economic Burden Growth Yearly ($),Economic Burden Growth Yearly (%),Source,,,,,Population Over 50,% Undiagnosed out of Population
+Indonesia,Hypertension,2024,"282,477,584","32,424,300",45.3%,"14,688,208",1493253666,66.67%,,,,1.70%,0.184,34%%,,,,,,"60,000,000",0
+Indonesia,Diabetes,2024,"282,477,584","32,424,300",11.7%,"3,793,643",2685899315,75%,,,,0.48%,0.174,,,,2017,29000,,"60,000,000",2%
+Indonesia,Heart Problem,2024,"282,477,584","32,424,300",1.5%,"486,365",,93%,,,,0.20%,0.073,11%,,,2018,30000,,"60,000,000",0
+Indonesia,Stroke,2024,"282,477,584","32,424,300",2.1%,,,88.7%,,,,0.17%,0.15,,,,2020,33000,,"60,000,000",0
+Indonesia,Dementia,2024,"282,477,584","32,424,300",1.0%,"1,200,000",0,0%,,,75000,3.00%,0.08,6%,"~1,200,000 (est. cases mid-2020s)",,,,,"60,000,000",—
+Australia,Hypertension,,,,,,,,,,,,,,,,,,,"9,440,909",23%
+Australia,Diabetes,,,,,,,,,,,,,,,,,,,"9,440,909",15%
+Australia,Heart Problem,,,,,,,,,,,,,,,,,,,"9,440,909",6.70%
+Australia,Stroke,,,,,,,,,,,,,,,,,,,"9,440,909",0
+Australia,Dementia,,,,,,,,,,,,,,,,,,,"9,440,909",50%
+US,Hypertension,,,,,,,,,,,,,,,,,,,"119,392,268",6.10%
+US,Diabetes,,,,,,,,,,,,,,,,,,,"119,392,268",3.40%
+US,Heart Problem,,,,,,,,,,,,,,,,,,,"119,392,268",0
+US,Stroke,,,,,,,,,,,,,,,,,,,"119,392,268",0
+US,Dementia,,,,,,,,,,,,,,,,,,,"119,392,268",39.5
+India,Hypertension,,,,,,,,,,,,,,,,,,,"225,649,000",26%
+India,Diabetes,,,,,,,,,,,,,,,,,,,"225,649,000",24.80%
+India,Heart Problem,,,,,,,,,,,,,,,,,,,"225,649,000",68.70%
+India,Stroke,,,,,,,,,,,,,,,,,,,"225,649,000",0
+India,Dementia,,,,,,,,,,,,,,,,,,,"225,649,000",7.40%
+Thailand,Hypertension,,,,,,,,,,,,,,,,,,,"21,510,730",48.50%
+Thailand,Diabetes,,,,,,,,,,,,,,,,,,,"21,510,730",30.60%
+Thailand,Heart Problem,,,,,,,,,,,,,,,,,,,"21,510,730",3.54%
+Thailand,Stroke,,,,,,,,,,,,,,,,,,,"21,510,730",0
+Thailand,Dementia,,,,,,,,,,,,,,,,,,,"21,510,730",0
+Vietnam,Hypertension,,,,,,,,,,,,,,,,,,,"25,790,000",5.30%
+Vietnam,Diabetes,,,,,,,,,,,,,,,,,,,"25,790,000",51.50%
+Vietnam,Heart Problem,,,,,,,,,,,,,,,,,,,"25,790,000",31%
+Vietnam,Stroke,,,,,,,,,,,,,,,,,,,"25,790,000",0
+Vietnam,Dementia,,,,,,,,,,,,,,,,,,,"25,790,000",0
+Sri Lanka,Hypertension,,,,,,,,,,,,,,,,,,,"5,742,904",47%
+Sri Lanka,Diabetes,,,,,,,,,,,,,,,,,,,"5,742,904",33%
+Sri Lanka,Heart Problem,,,,,,,,,,,,,,,,,,,"5,742,904",3.80%
+Sri Lanka,Stroke,,,,,,,,,,,,,,,,,,,"5,742,904",0
+Sri Lanka,Dementia,,,,,,,,,,,,,,,,,,,"5,742,904",0
+Malaysia,Hypertension,,,,,,,,,,,,,,,,,,,"10,000,000",11.90%
+Malaysia,Diabetes,,,,,,,,,,,,,,,,,,,"10,000,000",3%
+Malaysia,Heart Problem,,,,,,,,,,,,,,,,,,,"10,000,000",3%
+Malaysia,Stroke,,,,,,,,,,,,,,,,,,,"10,000,000",1.50%
+Malaysia,Dementia,,,,,,,,,,,,,,,,,,,"10,000,000",5%
+Brunei Darussalam,Hypertension,,,,,,,,,,,,,,,,,,,"90,000",11.90%
+Brunei Darussalam,Diabetes,,,,,,,,,,,,,,,,,,,"90,000",3%
+Brunei Darussalam,Heart Problem,,,,,,,,,,,,,,,,,,,"90,000",2%
+Brunei Darussalam,Stroke,,,,,,,,,,,,,,,,,,,"90,000",1%
+Brunei Darussalam,Dementia,,,,,,,,,,,,,,,,,,,"90,000",3%
+Singapure,Hypertension,,,,,,,,,,,,,,,,,,,"2,000,000",12%
+Singapure,Diabetes,,,,,,,,,,,,,,,,,,,"2,000,000",3%
+Singapure,Heart Problem,,,,,,,,,,,,,,,,,,,"2,000,000",3%
+Singapure,Stroke,,,,,,,,,,,,,,,,,,,"2,000,000",0.50%
+Singapure,Dementia,,,,,,,,,,,,,,,,,,,"2,000,000",4%
+Ethiopia,Hypertension,,,,,,,,,,,,,,,,,,,"14,000,000",8%
+Ethiopia,Diabetes,,,,,,,,,,,,,,,,,,,"14,000,000",0.60%
+Ethiopia,Heart Problem,,,,,,,,,,,,,,,,,,,"14,000,000",
+Ethiopia,Stroke,,,,,,,,,,,,,,,,,,,"14,000,000",
+Ethiopia,Dementia,,,,,,,,,,,,,,,,,,,"2,000,000",
+Rwanda,Hypertension,,,,,,,,,,,,,,,,,,,"1,000,000",6
+Rwanda,Diabetes,,,,,,,,,,,,,,,,,,,"1,000,000",0.7
+Rwanda,Heart Problem,,,,,,,,,,,,,,,,,,,"1,000,000",
+Rwanda,Stroke,,,,,,,,,,,,,,,,,,,"1,000,000",
+Rwanda,Dementia,,,,,,,,,,,,,,,,,,,"200,000",
+Chile,Hypertension,,,,,,,,,,,,,,,,,,,"5,500,000",6.5
+Chile,Diabetes,,,,,,,,,,,,,,,,,,,"5,500,000",2.5
+Chile,Heart Problem,,,,,,,,,,,,,,,,,,,"5,500,000",
+Chile,Stroke,,,,,,,,,,,,,,,,,,,"5,500,000",
+Chile,Dementia,,,,,,,,,,,,,,,,,,,"2,000,000",
+Canada,Hypertension,,,,,,,,,,,,,,,,,,,"16,000,000",2
+Canada,Diabetes,,,,,,,,,,,,,,,,,,,"16,000,000",2.5
+Canada,Heart Problem,,,,,,,,,,,,,,,,,,,"16,000,000",
+Canada,Stroke,,,,,,,,,,,,,,,,,,,"16,000,000",
+Canada,Dementia,,,,,,,,,,,,,,,,,,,"7,700,000",0.8
+Portugal,Hypertension,,,,,,,,,,,,,,,,,,,"3,500,000",12
+Portugal,Diabetes,,,,,,,,,,,,,,,,,,,"3,500,000",3
+Portugal,Heart Problem,,,,,,,,,,,,,,,,,,,"3,500,000",
+Portugal,Stroke,,,,,,,,,,,,,,,,,,,"3,500,000",
+Portugal,Dementia,,,,,,,,,,,,,,,,,,,"2,000,000",
+Finlandia,Hypertension,,,,,,,,,,,,,,,,,,,"2,200,000",5
+Finlandia,Diabetes,,,,,,,,,,,,,,,,,,,"2,200,000",0.8
+Finlandia,Heart Problem,,,,,,,,,,,,,,,,,,,"2,200,000",
+Finlandia,Stroke,,,,,,,,,,,,,,,,,,,"2,200,000",
+Finlandia,Dementia,,,,,,,,,,,,,,,,,,,"1,350,000",6
+Romania,Hypertension,,,,,,,,,,,,,,,,,,,"6,500,000",10
+Romania,Diabetes,,,,,,,,,,,,,,,,,,,"6,500,000",1.3
+Romania,Heart Problem,,,,,,,,,,,,,,,,,,,"6,500,000",
+Romania,Stroke,,,,,,,,,,,,,,,,,,,"6,500,000",
+Romania,Dementia,,,,,,,,,,,,,,,,,,,"3,000,000",
+,,,,,,,,,,,,,,,,,,,,,
+New Countries add here,,,,,,,,,,,,,,,,,,,,,
+Note:,,,,,,,,,,,,,,,,,,,,,
+"Untuk Indonesia, semua provinces, all done datanya",,,,,,,,,,,,,,,,,,,,,
