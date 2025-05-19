@@ -1,0 +1,12 @@
+{
+  "capacity_yearly": 110400,
+  "old_ratio": 0.114785391254267,
+  "old_population_all": 32424300,
+  "growth_rate": 0.016,
+  "undiagnosed_ratio": {
+    "Diabetes": 0.75,
+    "Hypertension": 0.6667,
+    "Heart Problem": 0.93,
+    "Stroke": 0.887
+  }
+}
