@@ -65,6 +65,7 @@ def app():
     }
 
     response = requests.post("http://localhost:5000/predict", json=payload)
+    # print(response)
     result = response.json()
 
     population = result["population"]
