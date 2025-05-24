@@ -79,10 +79,10 @@ selected_disease = st.selectbox('Select the Non-Communicable Diseases (NCD) of I
 st.plotly_chart(model.line_chart(prevalence_data, selected_disease))
 st.plotly_chart(model.line_chart_economy(econ_data, selected_disease))
 
-st.markdown('#### At a Glance: Economic Burden of NCDs Compared')
-fig_compare, df_long = model.line_chart_economy_disease_compare(econ_data, top=5)
-st.plotly_chart(fig_compare, use_container_width=True)
-df_long.to_csv('economic_burden_compare.csv', index=False)
+# st.markdown('#### At a Glance: Economic Burden of NCDs Compared')
+# fig_compare, df_long = model.line_chart_economy_disease_compare(econ_data, top=5)
+# st.plotly_chart(fig_compare, use_container_width=True)
+# df_long.to_csv('economic_burden_compare.csv', index=False)
 
 st.divider()
 
@@ -97,11 +97,12 @@ year = st.slider('Select Year', 2014, 2034, 2024)
 
 col1, col2 = st.columns(2)
 with col1:
-    clinic_count = st.number_input('Number of Clinics*', min_value=1, value=default_clinics)
+    st.image('clinic_2.png', width=300)
 with col2:
+    clinic_count = st.number_input('Number of Clinics*', min_value=1, value=default_clinics)
     provider_count = st.number_input('Medical Providers per Clinic', min_value=1)
-st.caption('*New start-ups, acquired or repurposed from existing clinics')
-capacity_pct = st.number_input('Capacity Allocation (%) to NCD', min_value=1, max_value=100, value=20)
+    st.caption('*New start-ups, acquired or repurposed from existing clinics')
+    capacity_pct = st.number_input('Capacity Allocation (%) to NCD', min_value=1, max_value=100, value=20)
 
 # Replaced API call with direct function
 result = run_intervention_model(selected_disease, selected_province, year, clinic_count, provider_count, capacity_pct)
