@@ -1,0 +1,61 @@
+Cost ID,Category,Sub-Category,Item,Desc,Quantity Low,Quantity High,Unit,Amount Low,Amount High,Amount AUD Low,Amount AUD High,Remark,Type,Already Incurred,Confirmed By,Relative to Prototype Number,Needed Pre-Product
+,Marketing,Social Event,Past Marketing Cost,"Utilities: Banner, Brochures, Printing, Transport, etc",,1,times,"Rp4,900,000","Rp4,900,000",$464.24,$464.24,,OPEX,Yes,Zia,Fixed Cost,Yes
+,,Social Event,Private Social Event,,2,4,times,"Rp4,000,000","Rp8,000,000",$378.97,$757.94,,OPEX,Not Yet,Zia,Fixed Cost,Yes
+,,Social Event,Joint Social Event,,6,8,times,"Rp36,000,000","Rp48,000,000","$3,410.75","$4,547.67",,OPEX,Not Yet,Zia,Fixed Cost,Yes
+,,Social Event,Professional Documentation,Photographer,8,12,times,"Rp8,000,000","Rp12,000,000",$757.94,"$1,136.92",,OPEX,Not Yet,Zia,Fixed Cost,Yes
+,,Advertising,Past Social Media Ads,During 2024 (already spent),2,2,times,"Rp7,000,000","Rp7,000,000",$663.20,$663.20,,OPEX,Yes,Zia,Fixed Cost,Yes
+,,Advertising,Social Media Ads,,2,2,times,"Rp2,000,000","Rp2,000,000",$189.49,$189.49,,OPEX,Not Yet,Syifa,Fixed Cost,Yes
+,,Advertising,Google Ads ,,3,5,times,"Rp3,000,000","Rp5,000,000",$284.23,$473.72,,OPEX,Not Yet,Zaki,Fixed Cost,Yes
+,,Advertising,Past Influencers Endorsement,During 2023,2,2,times,"Rp1,955,000","Rp1,955,000",$185.22,$185.22,,OPEX,Yes,Zia,Fixed Cost,Yes
+,,Advertising,Influencers Endorsement,,3,3,times,"Rp5,000,000","Rp5,000,000",$473.72,$473.72,,OPEX,Not Yet,Syifa,Fixed Cost,Yes
+,,Advertising,Marketing Officer (Ads Controller and Optimization),,4,4,Month,"Rp10,000,000","Rp10,000,000",$947.43,$947.43,Assumed 2.5m part time per month,OPEX,Not Yet,Zia,Fixed Cost,Yes
+,,Advertising,CRM Marketing Optimization ,Third-Party optimization tool,3,3,Month,"Rp3,000,000","Rp3,000,000",$284.23,$284.23,,OPEX,Not Yet,Zia,Fixed Cost,Yes
+,,Advertising,Video Editing (Content Making) Subscription Tool,"Capcut, etc",6,6,Month,"Rp1,800,000","Rp1,800,000",$170.54,$170.54,"Has been incurred in the past for several times, and also will be during the prototyping",OPEX,Not Yet,Zia,Fixed Cost,Yes
+,,Filmmaking,Filmmaking Related Cost,,1,1,times,"Rp31,200,000","Rp31,200,000","$2,955.98","$2,955.98",,OPEX,Yes,Zia,Fixed Cost,Yes
+,,Filmmaking,Film Research Cost,Research Cost 2024 & 2025,2,2,times,"Rp29,200,000","Rp29,200,000","$2,766.50","$2,766.50",,OPEX,Yes,Zia,Fixed Cost,Yes
+,R&D,Creative Design,UI/UX Designer Salary,,1,1,Month,"Rp7,000,000","Rp7,000,000",$663.20,$663.20,Website design and Logo,CAPEX,Yes,Zaki,Fixed Cost,Yes
+,,Creative Design,Content Writer / Copywriting,,1,1,Month,"Rp6,000,000","Rp6,000,000",$568.46,$568.46,,,Yes,Syifa,Fixed Cost,Yes
+,,Research and Product Design,Health and Product Researcher,Part-Time Equivalent,4,4,Month,"Rp16,000,000","Rp16,000,000","$1,515.89","$1,515.89",,,Not Yet,,Fixed Cost,Yes
+,,Research and Product Design,Clinical Advisor,Part-Time Equivalent,4,4,Month,"Rp16,000,000","Rp16,000,000","$1,515.89","$1,515.89",,,Not Yet,,Fixed Cost,Yes
+,,Research and Product Design,System Prototyping,Payment for Prototyping Tools Service,12,12,Month,"Rp13,524,000","Rp13,524,000","$1,281.31","$1,281.31",Softr and Airtable,CAPEX,Not Yet,,Fixed Cost,Yes
+,,Research and Product Design,Physical Device Prototype (Existing),All fees (product and tax),2,2,items,"Rp1,584,110","Rp1,584,110",$150.00,$150.00,,,Yes,,Fixed Cost,Yes
+,,Research and Product Design,Developers,Human Resources,Menurutmu efektif ngerjain prototipe ini berapa lama (dedicated),3,Month,"Rp15,000,000","Rp15,000,000","$1,421.15","$1,421.15",Fanany's Research and Development (including Prototyping),,Yes,,Fixed Cost,Yes
+,,Regulatory & Compliance,Ethical Clearance Testing Cost,Required to gather feedback during social event demonstration,1,1,times,"Rp2,000,000","Rp2,000,000",$189.49,$189.49,,,Not Yet,Syifa,Fixed Cost,No
+,,Regulatory & Compliance,Ethical Clearance (Resources),"Additional costs include document preparation, translations to Bahasa, and using a local regulatory consultant if needed",1,1,set,"Rp20,000,000","Rp20,000,000","$1,894.86","$1,894.86",,,Not Yet,,Fixed Cost,No
+,,Regulatory & Compliance,Ethical Clearance Approval by IRB,Post Ethical Clearence Testing,1,1,times,"Rp20,000,000","Rp20,000,000","$1,894.86","$1,894.86",,,Not Yet,,Fixed Cost,No
+,,Regulatory & Compliance,Medical Equipment Registration Fee,Required and Facilitated by Ministry of Health,1,1,times,"Rp3,000,000","Rp3,000,000",$284.23,$284.23,,,Not Yet,Syifa,Fixed Cost,No
+,,Regulatory & Compliance,Compensation for Clinical Test,Expected Fee to be paid for survey participant during social event,278,278,times,"Rp13,900,000","Rp13,900,000","$1,316.93","$1,316.93",,,Not Yet,Syifa,Fixed Cost,No
+,,Regulatory & Compliance,Clinical Test Human Resources,,12,12,person x month,"Rp93,000,000","Rp93,000,000","$8,811.11","$8,811.11","Coordinator, Medical Staff 2x, Staff, Data Analyst",,Not Yet,Zia,Fixed Cost,No
+,,Regulatory & Compliance,Legal for Company Establishment (Incorporation Fee),Using Consulting Services to help us obtain NIB (or Business Identification Number),1,1,times,"Rp25,000,000","Rp25,000,000","$2,368.58","$2,368.58",,,Not Yet,,Fixed Cost,No
+,,Regulatory & Compliance,IDAK (License/Permit for Medical Devices Distribution),Consulting/training may be required as we must comply to CDAKB (Good Distribution Practice for Medical Devices) in obtaining this license ,1,1,times,"Rp30,000,000","Rp30,000,000","$2,842.29","$2,842.29",,,Not Yet,,Fixed Cost,No
+,,Research and Product Design,Pilot Survey,Pilot survey to raise importance for capital raising,3,3,times,"Rp2,000,000","Rp2,000,000",$189.49,$189.49,Amount has been in total,,Not Yet,Zia,Fixed Cost,No
+,Manufacturing,Hardware,One lead ECG,,250,500,units,"Rp183,217,352","Rp366,434,705","$17,348.93","$34,697.86",,,Not Yet,,Variable Cost,No
+,,Hardware,6-Lead ECG,,50,100,units,"Rp366,434,705","Rp732,869,409","$34,697.86","$69,395.72",,,Not Yet,,Variable Cost,No
+,,Hardware & Software Integration and Testing,"Includes Electrical Testing, EMC Testing, Hardware/Software Integration, Device Communication Testing, Durability Testing",,,,,"Rp250,000,000","Rp250,000,000","$23,685.78","$23,685.78",,,Not Yet,,Fixed Cost,No
+,,Logistic & Tax,Shipment,At cost (depends on number of product),,,,,,,,,,Not Yet,,Variable Cost,No
+,,Logistic & Tax,Import Duty (Bea Masuk),,,,,,,,,,,Not Yet,,Variable Cost,No
+,,Logistic & Tax,VAT,,,,,,,,,,,Not Yet,,Variable Cost,No
+,,Logistic & Tax,Income Tax Prepayment,,,,,,,,,,,Not Yet,,Variable Cost,No
+,,Logistic & Tax,Handling/Clearance Fee,at cost (depend on number of shipment),,,,,,,,,,Not Yet,,Variable Cost,No
+,Operational,Overhead,WhatsApp Business API,"Needed for automated customer response, bulk reminders, and post-event engagement.",,1,times,"Rp1,500,000","Rp1,500,000",$142.11,$142.11,Used for the social event and entire prototyping customer service activity,,Not Yet,Zia,Fixed Cost,No
+,,Compensation & Slotting,Hospital Slotting,,5,8,hospital,"Rp10,000,000","Rp40,000,000",$947.43,"$3,789.72",,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Hospital Prototyping Cost,,5,8,hospital,"Rp6,000,000","Rp9,600,000",$568.46,$909.53,,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Human Resources Training for Hospital,,5,8,hospital,"Rp25,000,000","Rp40,000,000","$2,368.58","$3,789.72",,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Patient Participation,,5,8,hospital,"Rp5,000,000","Rp8,000,000",$473.72,$757.94,,,Not Yet,,Fixed Cost,No
+,,Compensation & Slotting,Private Clinic Slotting,,20,30,clinics,"Rp50,000,000","Rp75,000,000","$4,737.16","$7,105.73",,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Survey Incentives Hospital,assumed 20 patients per hospital,5,8,hospital,"Rp1,000,000","Rp3,200,000",$94.74,$303.18,,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Survey Instrument Private Clinics,assumed 150 patients per clinic,20,30,clinics,"Rp30,000,000","Rp90,000,000","$2,842.29","$8,526.88",,,Not Yet,,Fixed Cost,No
+,,Compensation & Slotting,Online Distributors Slotting Fee,,5,5,sellers,"Rp8,500,000","Rp10,000,000",$805.32,$947.43,,,Not Yet,,Fixed Cost,No
+,,Compensation & Slotting,Offline Distributors Slotting Fee,,5,5,sellers,"Rp10,000,000","Rp15,000,000",$947.43,"$1,421.15",,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Offline Distributors Logistics,Shipment and Technical Onboarding,5,5,sellers,"Rp8,500,000","Rp8,500,000",$805.32,$805.32,,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Sales by Distributors,Depends on sales,,,,,,,,,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Offline Consignment Operating Fee,Assuming 10-20 prototypes per distributors,5,5,sellers,"Rp1,000,000","Rp5,000,000",$94.74,$473.72,,,Not Yet,,Fixed Cost,No
+,,Compensation & Slotting,Online Marketplace Discount,Can be also a shipping promos,20,50,units,"Rp1,000,000","Rp2,500,000",$94.74,$236.86,,,Not Yet,,Fixed Cost,No
+,,Compensation & Slotting,Offline Pharmacy Chain Slotting Fee,Big chain in Jakarta for example,2,3,units,"Rp40,000,000","Rp60,000,000","$3,789.72","$5,684.59",,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Transportation and Accomodation,Covering for all mobilization across partner distribution/marketing channel,1,1,set,"Rp20,000,000","Rp25,000,000","$1,894.86","$2,368.58",,,Not Yet,,Fixed Cost,No
+,,Human Resources & Accomodation,Main Human Resources,Planning and Overseeing Prototyping Process,5,5,staff,"Rp90,000,000","Rp90,000,000","$8,526.88","$8,526.88",,,Not Yet,,Fixed Cost,No
+,R&D,System Software Development,Past Web App Development (Human Resources),Human Resources,6,6,staff x month,"Rp48,000,000","Rp48,000,000","$4,547.67","$4,547.67",3 staff for 2 month,,Yes,Efrizal,Fixed Cost,Yes
+,,System Software Development,Past Web App Development (Third-Party Services),Subscription and payments occured,1,1,set,"Rp8,635,298","Rp8,635,298",$817.68,$817.68,,,Yes,Efrizal,Fixed Cost,Yes
+,,System Software Development,Onwards Web App Development (Human Resources),Human Resources Projected,9,18,staff x month,"Rp72,000,000","Rp144,000,000","$6,821.50","$13,643.01","3 staff for 6 month (1.5 staff for lower scenario), for further development and maintenance",,Not Yet,Efrizal,Fixed Cost,Yes
+,,System Software Development,Onwards Web App Development (Third-Party Services),Subscription and payments payable,12,12,month,"Rp4,366,651","Rp4,366,651",$413.48,$413.48,,,Not Yet,Efrizal,Fixed Cost,Yes
+,Operational,Overhead,Web App Storage and Resource,Quantity Low for low usage and High for high usage,1,1,year,"Rp13,629,417","Rp14,348,932",1290.575244,"$1,358.71",for 1 year,,Not Yet,Efrizal,Fixed Cost,Yes

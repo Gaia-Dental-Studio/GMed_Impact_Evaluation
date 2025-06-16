@@ -1,0 +1,54 @@
+,Category,Sub-Category,Item,Desc,Quantity Low,Quantity High,Unit,Amount Low,Amount High,Amount AUD Low,Amount AUD High,Remark,Type,Already Incurred,Confirmed By,Relative to Prototype Number,Needed Pre-Product
+1,Marketing,Social Event,Past Marketing Cost,"Utilities: Banner, Brochures, Printing, Transport, etc",,1.0,times,4900000.0,4900000.0,464.24,464.24,,OPEX,Yes,Zia,Fixed Cost,Yes
+2,Marketing,Social Event,Private Social Event,,2,4.0,times,4000000.0,8000000.0,378.97,757.94,,OPEX,Not Yet,Zia,Fixed Cost,Yes
+3,Marketing,Social Event,Joint Social Event,,6,8.0,times,36000000.0,48000000.0,3410.75,4547.67,,OPEX,Not Yet,Zia,Fixed Cost,Yes
+4,Marketing,Social Event,Professional Documentation,Photographer,8,12.0,times,8000000.0,12000000.0,757.94,1136.92,,OPEX,Not Yet,Zia,Fixed Cost,Yes
+5,Marketing,Advertising,Past Social Media Ads,During 2024 (already spent),2,2.0,times,7000000.0,7000000.0,663.2,663.2,,OPEX,Yes,Zia,Fixed Cost,Yes
+6,Marketing,Advertising,Social Media Ads,,2,2.0,times,2000000.0,2000000.0,189.49,189.49,,OPEX,Not Yet,Syifa,Fixed Cost,Yes
+7,Marketing,Advertising,Google Ads ,,3,5.0,times,3000000.0,5000000.0,284.23,473.72,,OPEX,Not Yet,Zaki,Fixed Cost,Yes
+8,Marketing,Advertising,Past Influencers Endorsement,During 2023,2,2.0,times,1955000.0,1955000.0,185.22,185.22,,OPEX,Yes,Zia,Fixed Cost,Yes
+9,Marketing,Advertising,Influencers Endorsement,,3,3.0,times,5000000.0,5000000.0,473.72,473.72,,OPEX,Not Yet,Syifa,Fixed Cost,Yes
+10,Marketing,Advertising,Marketing Officer (Ads Controller and Optimization),,4,4.0,Month,10000000.0,10000000.0,947.43,947.43,Assumed 2.5m part time per month,OPEX,Not Yet,Zia,Fixed Cost,Yes
+11,Marketing,Advertising,CRM Marketing Optimization ,Third-Party optimization tool,3,3.0,Month,3000000.0,3000000.0,284.23,284.23,,OPEX,Not Yet,Zia,Fixed Cost,Yes
+12,Marketing,Advertising,Video Editing (Content Making) Subscription Tool,"Capcut, etc",6,6.0,Month,1800000.0,1800000.0,170.54,170.54,"Has been incurred in the past for several times, and also will be during the prototyping",OPEX,Not Yet,Zia,Fixed Cost,Yes
+13,Marketing,Filmmaking,Filmmaking Related Cost,,1,1.0,times,31200000.0,31200000.0,2955.98,2955.98,,OPEX,Yes,Zia,Fixed Cost,Yes
+14,Marketing,Filmmaking,Film Research Cost,Research Cost 2024 & 2025,2,2.0,times,29200000.0,29200000.0,2766.5,2766.5,,OPEX,Yes,Zia,Fixed Cost,Yes
+15,R&D,Creative Design,UI/UX Designer Salary,,1,1.0,Month,7000000.0,7000000.0,663.2,663.2,Website design and Logo,CAPEX,Yes,Zaki,Fixed Cost,Yes
+16,R&D,Creative Design,Content Writer / Copywriting,,1,1.0,Month,6000000.0,6000000.0,568.46,568.46,,,Yes,Syifa,Fixed Cost,Yes
+17,R&D,Research and Product Design,Health and Product Researcher,Part-Time Equivalent,4,4.0,Month,16000000.0,16000000.0,1515.89,1515.89,,,Not Yet,,Fixed Cost,Yes
+18,R&D,Research and Product Design,Clinical Advisor,Part-Time Equivalent,4,4.0,Month,16000000.0,16000000.0,1515.89,1515.89,,,Not Yet,,Fixed Cost,Yes
+19,R&D,Research and Product Design,System Prototyping,Payment for Prototyping Tools Service,12,12.0,Month,13524000.0,13524000.0,1281.31,1281.31,Softr and Airtable,CAPEX,Not Yet,,Fixed Cost,Yes
+20,R&D,Research and Product Design,Physical Device Prototype (Existing),All fees (product and tax),2,2.0,items,1584110.0,1584110.0,150.0,150.0,,,Yes,,Fixed Cost,Yes
+21,R&D,Research and Product Design,Developers,Human Resources,Menurutmu efektif ngerjain prototipe ini berapa lama (dedicated),3.0,Month,15000000.0,15000000.0,1421.15,1421.15,Fanany's Research and Development (including Prototyping),,Yes,,Fixed Cost,Yes
+22,R&D,Regulatory & Compliance,Ethical Clearance Testing Cost,Required to gather feedback during social event demonstration,1,1.0,times,2000000.0,2000000.0,189.49,189.49,,,Not Yet,Syifa,Fixed Cost,No
+23,R&D,Regulatory & Compliance,Ethical Clearance (Resources),"Additional costs include document preparation, translations to Bahasa, and using a local regulatory consultant if needed",1,1.0,set,20000000.0,20000000.0,1894.86,1894.86,,,Not Yet,,Fixed Cost,No
+24,R&D,Regulatory & Compliance,Ethical Clearance Approval by IRB,Post Ethical Clearence Testing,1,1.0,times,20000000.0,20000000.0,1894.86,1894.86,,,Not Yet,,Fixed Cost,No
+25,R&D,Regulatory & Compliance,Medical Equipment Registration Fee,Required and Facilitated by Ministry of Health,1,1.0,times,3000000.0,3000000.0,284.23,284.23,,,Not Yet,Syifa,Fixed Cost,No
+26,R&D,Regulatory & Compliance,Compensation for Clinical Test,Expected Fee to be paid for survey participant during social event,278,278.0,times,13900000.0,13900000.0,1316.93,1316.93,,,Not Yet,Syifa,Fixed Cost,No
+27,R&D,Regulatory & Compliance,Clinical Test Human Resources,,12,12.0,person x month,93000000.0,93000000.0,8811.11,8811.11,"Coordinator, Medical Staff 2x, Staff, Data Analyst",,Not Yet,Zia,Fixed Cost,No
+28,R&D,Regulatory & Compliance,Legal for Company Establishment (Incorporation Fee),Using Consulting Services to help us obtain NIB (or Business Identification Number),1,1.0,times,25000000.0,25000000.0,2368.58,2368.58,,,Not Yet,,Fixed Cost,No
+29,R&D,Regulatory & Compliance,IDAK (License/Permit for Medical Devices Distribution),Consulting/training may be required as we must comply to CDAKB (Good Distribution Practice for Medical Devices) in obtaining this license ,1,1.0,times,30000000.0,30000000.0,2842.29,2842.29,,,Not Yet,,Fixed Cost,No
+30,R&D,Research and Product Design,Pilot Survey,Pilot survey to raise importance for capital raising,3,3.0,times,2000000.0,2000000.0,189.49,189.49,Amount has been in total,,Not Yet,Zia,Fixed Cost,No
+33,Manufacturing,Hardware & Software Integration and Testing,"Includes Electrical Testing, EMC Testing, Hardware/Software Integration, Device Communication Testing, Durability Testing",,,,,250000000.0,250000000.0,23685.78,23685.78,,,Not Yet,,Fixed Cost,No
+39,Operational,Overhead,WhatsApp Business API,"Needed for automated customer response, bulk reminders, and post-event engagement.",,1.0,times,1500000.0,1500000.0,142.11,142.11,Used for the social event and entire prototyping customer service activity,,Not Yet,Zia,Fixed Cost,No
+40,Operational,Compensation & Slotting,Hospital Slotting,,5,8.0,hospital,10000000.0,40000000.0,947.43,3789.72,,,Not Yet,,Fixed Cost,No
+41,Operational,Human Resources & Accomodation,Hospital Prototyping Cost,,5,8.0,hospital,6000000.0,9600000.0,568.46,909.53,,,Not Yet,,Fixed Cost,No
+42,Operational,Human Resources & Accomodation,Human Resources Training for Hospital,,5,8.0,hospital,25000000.0,40000000.0,2368.58,3789.72,,,Not Yet,,Fixed Cost,No
+43,Operational,Human Resources & Accomodation,Patient Participation,,5,8.0,hospital,5000000.0,8000000.0,473.72,757.94,,,Not Yet,,Fixed Cost,No
+44,Operational,Compensation & Slotting,Private Clinic Slotting,,20,30.0,clinics,50000000.0,75000000.0,4737.16,7105.73,,,Not Yet,,Fixed Cost,No
+45,Operational,Human Resources & Accomodation,Survey Incentives Hospital,assumed 20 patients per hospital,5,8.0,hospital,1000000.0,3200000.0,94.74,303.18,,,Not Yet,,Fixed Cost,No
+46,Operational,Human Resources & Accomodation,Survey Instrument Private Clinics,assumed 150 patients per clinic,20,30.0,clinics,30000000.0,90000000.0,2842.29,8526.88,,,Not Yet,,Fixed Cost,No
+47,Operational,Compensation & Slotting,Online Distributors Slotting Fee,,5,5.0,sellers,8500000.0,10000000.0,805.32,947.43,,,Not Yet,,Fixed Cost,No
+48,Operational,Compensation & Slotting,Offline Distributors Slotting Fee,,5,5.0,sellers,10000000.0,15000000.0,947.43,1421.15,,,Not Yet,,Fixed Cost,No
+49,Operational,Human Resources & Accomodation,Offline Distributors Logistics,Shipment and Technical Onboarding,5,5.0,sellers,8500000.0,8500000.0,805.32,805.32,,,Not Yet,,Fixed Cost,No
+50,Operational,Human Resources & Accomodation,Sales by Distributors,Depends on sales,,,,,,,,,,Not Yet,,Fixed Cost,No
+51,Operational,Human Resources & Accomodation,Offline Consignment Operating Fee,Assuming 10-20 prototypes per distributors,5,5.0,sellers,1000000.0,5000000.0,94.74,473.72,,,Not Yet,,Fixed Cost,No
+52,Operational,Compensation & Slotting,Online Marketplace Discount,Can be also a shipping promos,20,50.0,units,1000000.0,2500000.0,94.74,236.86,,,Not Yet,,Fixed Cost,No
+53,Operational,Compensation & Slotting,Offline Pharmacy Chain Slotting Fee,Big chain in Jakarta for example,2,3.0,units,40000000.0,60000000.0,3789.72,5684.59,,,Not Yet,,Fixed Cost,No
+54,Operational,Human Resources & Accomodation,Transportation and Accomodation,Covering for all mobilization across partner distribution/marketing channel,1,1.0,set,20000000.0,25000000.0,1894.86,2368.58,,,Not Yet,,Fixed Cost,No
+55,Operational,Human Resources & Accomodation,Main Human Resources,Planning and Overseeing Prototyping Process,5,5.0,staff,90000000.0,90000000.0,8526.88,8526.88,,,Not Yet,,Fixed Cost,No
+56,R&D,System Software Development,Past Web App Development (Human Resources),Human Resources,6,6.0,staff x month,48000000.0,48000000.0,4547.67,4547.67,3 staff for 2 month,,Yes,Efrizal,Fixed Cost,Yes
+57,R&D,System Software Development,Past Web App Development (Third-Party Services),Subscription and payments occured,1,1.0,set,8635298.0,8635298.0,817.68,817.68,,,Yes,Efrizal,Fixed Cost,Yes
+58,R&D,System Software Development,Onwards Web App Development (Human Resources),Human Resources Projected,9,18.0,staff x month,72000000.0,144000000.0,6821.5,13643.01,"3 staff for 6 month (1.5 staff for lower scenario), for further development and maintenance",,Not Yet,Efrizal,Fixed Cost,Yes
+59,R&D,System Software Development,Onwards Web App Development (Third-Party Services),Subscription and payments payable,12,12.0,month,4366651.0,4366651.0,413.48,413.48,,,Not Yet,Efrizal,Fixed Cost,Yes
+60,Operational,Overhead,Web App Storage and Resource,Quantity Low for low usage and High for high usage,1,1.0,year,13629417.0,14348932.0,1290.575244,1358.71,for 1 year,,Not Yet,Efrizal,Fixed Cost,Yes
