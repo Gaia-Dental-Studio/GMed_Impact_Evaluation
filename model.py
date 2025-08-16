@@ -8,7 +8,10 @@ class Model:
         self.data = None
         
     def line_chart(self, data, column):
-        fig = px.line(data.reset_index(), x='index', y=column, title=f'{column} Prevalency (%) in Indonesia, Age 40+', labels={'index': 'Year', column: 'Prevalence (%)'})
+        
+        # data['Prevalence (%)'] = data['Prevalence (%)'].round(2)
+        
+        fig = px.line(data.reset_index(), x='index', y=column, title=f'{column} Prevalency (%)', labels={'index': 'Year', column: 'Prevalence (%)'})
         fig.update_layout(
             xaxis=dict(tickmode='linear', tick0=2010, dtick=1),
             xaxis_title='Year',
@@ -21,12 +24,20 @@ class Model:
     
     
     def line_chart_economy(self, data, column):
-        fig = px.line(data.reset_index(), x='index', y=column, title=f'{column} Economy Burden (in $ Billion)', labels={'index': 'Year', column: 'Prevalence (%)'})
+        
+        # rename column 'Prevalence (%)' with '$ Billion' of data
+        data = data.rename(columns={'Prevalence (%)': '$ Billion'})
+
+        # round value of column '$ Billion' to 2 decimal places
+        # data['$ Billion'] = data['$ Billion'].round(2)
+
+        fig = px.line(data.reset_index(), x='index', y=column, title=f'{column} Economy Burden (in $ Billion)', labels={'index': 'Year', column: '$ Billion'})
         fig.update_layout(
             xaxis=dict(tickmode='linear', tick0=2010, dtick=1),
             xaxis_title='Year',
             yaxis_title='$ Billion',
             template='plotly_white',
+            
             
         )
         
@@ -254,3 +265,66 @@ class Model:
         final_df = final_df.sort_index()
 
         return final_df
+
+
+    def transform_country_disease_new(self, df, country):
+        """
+        Transform the dataframe for a specific country to have diseases as columns
+        and years (2014, 2024) as rows. Uses current value and computes past value.
+
+        Args:
+            df (pd.DataFrame): Input DataFrame with 'Economic Burden ($)' and 
+                            'Economic Burden Growth Yearly ($)'.
+            country (str): The country to filter.
+
+        Returns:
+            pd.DataFrame: Transformed DataFrame with years as index and diseases as columns.
+        """
+        # Filter for the selected country
+        country_df = df[df['Country'] == country].copy()
+
+        # Calculate values for 2014 and 2024
+        country_df[2024] = country_df['Economic Burden ($)']
+        country_df[2014] = country_df['Economic Burden ($)'] - 10 * country_df['Economic Burden Growth Yearly ($)']
+        
+        multiplier = 10
+        
+        while country_df[2014].min() < 0:
+
+            # Adjust this multiplier as needed
+            
+            multiplier /= 2
+
+            # If any value in 2014 is negative, adjust it to zero
+            country_df[2014] = country_df['Economic Burden ($)'] - multiplier * country_df['Economic Burden Growth Yearly ($)']
+
+        # Transform to desired structure
+        transformed = country_df.set_index('Disease')[[2014, 2024]].T
+
+        return transformed
+
+
+    def transform_country_disease_prevalence_new(self, df, country):
+        """
+        Transform the dataframe for a specific country to have diseases as columns
+        and years (2014, 2024) as rows. Uses current value and computes past value.
+
+        Args:
+            df (pd.DataFrame): Input DataFrame with 'Economic Burden ($)' and 
+                            'Economic Burden Growth Yearly ($)'.
+            country (str): The country to filter.
+
+        Returns:
+            pd.DataFrame: Transformed DataFrame with years as index and diseases as columns.
+        """
+        # Filter for the selected country
+        country_df = df[df['Country'] == country].copy()
+
+        # Calculate values for 2014 and 2024
+        country_df[2024] = country_df['Prevalence % 40+'] * 100
+        country_df[2014] = (country_df['Prevalence % 40+'] - 10 * country_df['Prevalence % Growth Yearly']) * 100
+
+        # Transform to desired structure
+        transformed = country_df.set_index('Disease')[[2014, 2024]].T
+
+        return transformed
