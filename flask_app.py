@@ -116,6 +116,11 @@ def predict_worldwide():
     prevalence_data_transformed_sliced = prevalence_data_transformed_sliced.to_dict()
     economic_burden_transformed_sliced = economic_burden_transformed_sliced.to_dict()
     
+    economic_burden_transformed_sliced['economic_chart'] = economic_burden_transformed_sliced.pop(selected_disease)
+    prevalence_data_transformed_sliced['prevalence_chart'] = prevalence_data_transformed_sliced.pop(selected_disease)
+    
+    economic_burden_transformed_sliced.update(prevalence_data_transformed_sliced)
+    
     
     # economic_burden_transformed = economic_burden_transformed.to_dict()
     
@@ -153,11 +158,45 @@ def predict_worldwide():
         "susceptible_population_undiagnosed": round(susceptible_population_undiagnosed),
         "economic_burden": round(economic_burden),
         "economic_burden_per_capita": round(economic_burden_per_capita),
-        "prevalence_dataset": prevalence_data_transformed_sliced,
-        "economic_burden_dataset": economic_burden_transformed_sliced
+        # "prevalence_dataset": prevalence_data_transformed_sliced,
+        "combined_dataset": economic_burden_transformed_sliced
     })
 
+@app.route("/impact_worldwide", methods=["POST"])
+def impact_worldwide():
+    data = request.json
 
+    country = data['country']
+    disease = data['disease']
+    clinics = data["clinic_count"]
+    providers = data["provider_count"]
+    capacity_pct = data["capacity_pct"]
+    capacity_yearly = CONFIG["capacity_yearly"]
+    # undiagnosed_ratio = CONFIG["undiagnosed_ratio"][disease]
+    undiagnosed = data['susceptible_undiagnosed']
+    economic_burden = data['economic_burden']
+
+    # get undiagnosed_ratio from world_data dataset in row where in column of '% Undiagnosed Susceptible Population 40+'
+    undiagnosed_ratio = world_data.loc[(world_data['Country'] == country) & (world_data['Disease'] == disease), '% Undiagnosed Susceptible Population 40+'].values[0]
+
+    
+    # Intervention calculation
+    intervention_capacity = capacity_yearly * clinics * providers * capacity_pct / 100 / 20
+    pct_undiag_before = undiagnosed_ratio * 100
+    pct_undiag_after = max(0, pct_undiag_before * (1 - (intervention_capacity / undiagnosed))) if undiagnosed > 0 else 0
+
+    economic_burden_after = max(0, economic_burden * (1 - intervention_capacity / undiagnosed)) if undiagnosed > 0 else 0
+    economic_burden_delta = economic_burden - economic_burden_after
+
+
+    return jsonify({
+        "intervention_capacity": round(intervention_capacity),
+        "pct_undiag_before": round(pct_undiag_before, 2),
+        "pct_undiag_after": round(pct_undiag_after, 2),
+        "economic_burden_after": round(economic_burden_after),
+        "economic_burden_delta": round(economic_burden_delta),
+        "economic_burden": round(economic_burden),
+    })
 
 if __name__ == "__main__":
     app.run(debug=True)

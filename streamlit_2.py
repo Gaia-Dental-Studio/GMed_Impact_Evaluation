@@ -160,7 +160,6 @@ susceptible_population = results['susceptible_population']
 susceptible_population_undiagnosed = results['susceptible_population_undiagnosed']
 economic_burden_per_capita = results['economic_burden_per_capita']
 
-st.write(results['prevalence_dataset'])
 
 
 
@@ -176,6 +175,72 @@ with col2:
     st.metric('Susceptible Population (Undiagnosed)', f'{susceptible_population_undiagnosed:,.0f}', help='Based on Diagnosed to Undiagnosed Ratio')
     st.metric('Economic Burden per Capita (Yearly)', f'${economic_burden_per_capita:,.0f}')
     st.caption('Economic Burden per Capita = Total Economic Burden / Susceptible Population')
+    
+st.divider()
+
+st.markdown('### Introducing our Intervention Solution: GMedCC Health Stores')
+st.write('GMedCC Health Stores offer low footprint and set up costs, with maximum connectivity')
+
+default_clinics = 100
+
+year = st.slider('Select Year', 2014, 2034, 2024)
+
+col1, col2 = st.columns(2)
+with col1:
+    st.image('clinic_2.png', width=300)
+with col2:
+    clinic_count = st.number_input('Number of Clinics*', min_value=1, value=default_clinics)
+    provider_count = st.number_input('Medical Providers per Clinic', min_value=1)
+    st.caption('*New start-ups, acquired or repurposed from existing clinics')
+    capacity_pct = st.number_input('Capacity Allocation (%) to NCD', min_value=1, max_value=100, value=20)
+
+
+payload_2 = {
+    "country": selected_country,
+    "population": select_year_old_population,
+    "disease": selected_disease,
+    "susceptible_undiagnosed": susceptible_population_undiagnosed,
+    "economic_burden": economic_burden,
+    "clinic_count": clinic_count,
+    "provider_count": provider_count,
+    "capacity_pct": capacity_pct
+}
+
+
+
+response = requests.post("http://localhost:5000/impact_worldwide", json=payload_2)
+
+
+results = response.json()
+
+intervention_capacity = results["intervention_capacity"]
+pct_undiag_after = results["pct_undiag_after"]
+pct_undiag_before = results["pct_undiag_before"]
+econ_burden_after = results["economic_burden_after"]
+econ_burden_delta = results["economic_burden_delta"]
+econ_burden_total = results["economic_burden"]
+
+
+st.markdown('### Introducing our Intervention Solution')
+
+st.metric('Intervention Capacity (Yearly)', f'{intervention_capacity:,.0f}')
+
+delta_pct = round(pct_undiag_after - pct_undiag_before, 2)
+col3, col4 = st.columns(2)
+with col3:
+    st.metric('Percentage Undiagnosed (%)', pct_undiag_before)
+with col4:
+    st.metric('Undiagnosed After Intervention (%)', pct_undiag_after, delta=delta_pct, delta_color='inverse')
+
+delta_pct_econ = round((econ_burden_after - econ_burden_total) / econ_burden_total * 100, 2)
+col5, col6 = st.columns(2)
+with col5:
+    st.metric('Economic Burden (Before)', f'${econ_burden_total:,.0f}')
+with col6:
+    st.metric('Economic Burden (After)', f'${econ_burden_after:,.0f}')
+
+st.metric('Economic Burden Reduction', f'${econ_burden_delta:,.0f}', delta=delta_pct_econ, delta_color='inverse')
+
     
 # st.markdown('### Introducing our Intervention Solution')
 
