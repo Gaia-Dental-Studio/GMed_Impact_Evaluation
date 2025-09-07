@@ -110,6 +110,8 @@ def predict_worldwide():
     # slice prevalence_data_transformed so that it only contain column of selected_disease
     prevalence_data_transformed_sliced = prevalence_data_transformed[[selected_disease]]
     economic_burden_transformed_sliced = economic_burden_transformed[[selected_disease]]
+    
+    economic_burden_transformed_aggregated = economic_burden_transformed.sum(axis=1)
 
 
     # convert prevalence_data_transformed_sliced so that it can be send as payload to flask requests
@@ -159,7 +161,8 @@ def predict_worldwide():
         "economic_burden": round(economic_burden),
         "economic_burden_per_capita": round(economic_burden_per_capita),
         # "prevalence_dataset": prevalence_data_transformed_sliced,
-        "combined_dataset": economic_burden_transformed_sliced
+        "combined_dataset": economic_burden_transformed_sliced,
+        "economic_burden_all_disease": economic_burden_transformed_aggregated.to_dict(),
     })
 
 @app.route("/impact_worldwide", methods=["POST"])

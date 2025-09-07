@@ -153,6 +153,8 @@ response = requests.post("http://localhost:5000/predict_worldwide", json=payload
 
 results = response.json()
 
+st.write(results)
+
 select_year_old_population = results['population']
 susceptible_population_diagnosed = results['susceptible_population_diagnosed']
 economic_burden = results["economic_burden"]
