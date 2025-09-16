@@ -40,6 +40,8 @@ def predict():
     growth_rate = CONFIG["growth_rate"]
     capacity_yearly = CONFIG["capacity_yearly"]
     undiagnosed_ratio = CONFIG["undiagnosed_ratio"][disease]
+    
+    
 
     # Population
     if province == "Indonesia (All Provinces)":
@@ -59,6 +61,8 @@ def predict():
     # Economic burden
     burden_unit_cost = economic_burden_undiagnosed_data[disease].loc[year]
     economic_burden = burden_unit_cost * (susceptible_population / susceptible_all)
+    
+
 
     # Split population
     diagnosed = susceptible_population * (1 - undiagnosed_ratio)
