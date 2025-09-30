@@ -8,7 +8,7 @@ import json
 
 
 
-world_data = pd.read_csv('world_data_cleaned_new.csv')
+world_data = pd.read_csv('world_data_cleaned_new_2.csv')
 
 country_list = world_data['Country'].unique()
 
@@ -59,6 +59,8 @@ economic_burden_transformed = model.extend_years_quadratic_increment(economic_bu
 
 prevalence_data = model.transform_country_disease_prevalence_new(world_data, selected_country)
 prevalence_data_transformed = model.extend_years_quadratic_increment(prevalence_data, 2034)
+
+st.dataframe(prevalence_data_transformed)
 
 prevalence_forecast = model.line_chart(prevalence_data_transformed, selected_disease)
 economic_burden_forecast = model.line_chart_economy(economic_burden_transformed, selected_disease)

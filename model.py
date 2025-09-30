@@ -203,68 +203,151 @@ class Model:
 
 
 
+    # def extend_years_quadratic_increment(self, transformed_df, projected_year):
+    #     """
+    #     Extend the transformed dataframe by filling in missing years with quadratic increments
+    #     between the last two known years, and then continue extending linearly using the last increment
+    #     to the projected_year.
+
+    #     Args:
+    #         transformed_df (pd.DataFrame): DataFrame with Year as index and diseases as columns.
+    #         projected_year (int): The year to extend to.
+
+    #     Returns:
+    #         pd.DataFrame: Extended DataFrame with quadratic progression and then linear extension.
+    #     """
+
+    #     def quadratic_increments(start, end, years):
+    #         """Generate a list of increments that grow quadratically while summing to (end - start)."""
+    #         total_diff = end - start
+    #         weights = np.array([(i+1)**2 for i in range(years)])  # Quadratic growth
+    #         weights = weights / weights.sum()  # Normalize so that sum(weights) = 1
+    #         increments = weights * total_diff  # Scale weights to match total difference
+    #         return increments
+
+    #     # --- Step 1: Prepare the dataframe ---
+    #     df = transformed_df.copy()
+    #     years = df.index.tolist()
+    #     year_start, year_end = years[-2:]
+
+    #     # Generate quadratic interpolation between year_start and year_end
+    #     intermediate_years = list(range(year_start + 1, year_end))
+    #     quadratic_growth = {year: {} for year in intermediate_years}
+
+    #     for disease in df.columns:
+    #         inc_values = quadratic_increments(df.loc[year_start, disease], df.loc[year_end, disease], len(intermediate_years) + 1)
+    #         for i, year in enumerate(intermediate_years):
+    #             quadratic_growth[year][disease] = df.loc[year_start, disease] + sum(inc_values[:i+1])
+
+    #     # Create the interpolated DataFrame
+    #     interpolated_df = pd.DataFrame(quadratic_growth).T
+
+    #     # --- Step 2: Append original years and interpolated years ---
+    #     extended_df = pd.concat([df.loc[[year_start]], interpolated_df, df.loc[[year_end]]])
+
+    #     # --- Step 3: Extrapolate beyond year_end using the last increment value ---
+    #     final_increments = {
+    #         disease: quadratic_increments(df.loc[year_start, disease], df.loc[year_end, disease], len(intermediate_years) + 1)[-1]
+    #         for disease in df.columns
+    #     }
+
+    #     future_years = {
+    #         year: extended_df.loc[year_end] + pd.Series(final_increments) * (year - year_end)
+    #         for year in range(year_end + 1, projected_year + 1)
+    #     }
+    #     future_df = pd.DataFrame(future_years).T
+
+    #     # --- Step 4: Combine everything ---
+    #     final_df = pd.concat([extended_df, future_df])
+
+    #     # Ensure index is integer
+    #     final_df.index = final_df.index.astype(int)
+    #     final_df = final_df.sort_index()
+
+    #     return final_df
+    
     def extend_years_quadratic_increment(self, transformed_df, projected_year):
         """
-        Extend the transformed dataframe by filling in missing years with quadratic increments
-        between the last two known years, and then continue extending linearly using the last increment
-        to the projected_year.
-
-        Args:
-            transformed_df (pd.DataFrame): DataFrame with Year as index and diseases as columns.
-            projected_year (int): The year to extend to.
-
-        Returns:
-            pd.DataFrame: Extended DataFrame with quadratic progression and then linear extension.
+        Quadratic between the last two known years (for intermediates), then
+        linear beyond the end year using the SAME average annual increment
+        as the (start->end) span.
         """
+        import numpy as np
+        import pandas as pd
 
-        def quadratic_increments(start, end, years):
-            """Generate a list of increments that grow quadratically while summing to (end - start)."""
-            total_diff = end - start
-            weights = np.array([(i+1)**2 for i in range(years)])  # Quadratic growth
-            weights = weights / weights.sum()  # Normalize so that sum(weights) = 1
-            increments = weights * total_diff  # Scale weights to match total difference
-            return increments
+        def quadratic_increments(start, end, steps):
+            """
+            Return `steps` quadratic-growing increments that sum to (end - start).
+            steps = (end_year - start_year).
+            """
+            if steps <= 0:
+                return np.array([], dtype=float)
+            w = np.array([(i + 1) ** 2 for i in range(steps)], dtype=float)
+            w /= w.sum()
+            return w * (end - start)
 
-        # --- Step 1: Prepare the dataframe ---
+        # --- Prep ---
         df = transformed_df.copy()
-        years = df.index.tolist()
-        year_start, year_end = years[-2:]
+        years = list(df.index)
+        if len(years) < 2:
+            raise ValueError("transformed_df must contain at least two years.")
+        year_start, year_end = int(years[-2]), int(years[-1])
+        span = year_end - year_start
+        if span <= 0:
+            raise ValueError("The last two years must be strictly increasing.")
 
-        # Generate quadratic interpolation between year_start and year_end
+        # Intermediate years (exclude end)
         intermediate_years = list(range(year_start + 1, year_end))
-        quadratic_growth = {year: {} for year in intermediate_years}
 
-        for disease in df.columns:
-            inc_values = quadratic_increments(df.loc[year_start, disease], df.loc[year_end, disease], len(intermediate_years) + 1)
-            for i, year in enumerate(intermediate_years):
-                quadratic_growth[year][disease] = df.loc[year_start, disease] + sum(inc_values[:i+1])
+        # --- Quadratic fill for intermediates only; keep ORIGINAL end year ---
+        quad_dict = {y: {} for y in intermediate_years}
+        avg_increments = {}  # for linear tail
 
-        # Create the interpolated DataFrame
-        interpolated_df = pd.DataFrame(quadratic_growth).T
+        for col in df.columns:
+            start_val = df.loc[year_start, col]
+            end_val   = df.loc[year_end, col]
 
-        # --- Step 2: Append original years and interpolated years ---
-        extended_df = pd.concat([df.loc[[year_start]], interpolated_df, df.loc[[year_end]]])
+            # Quadratic increments across the whole span
+            inc = quadratic_increments(start_val, end_val, span)  # length = span
 
-        # --- Step 3: Extrapolate beyond year_end using the last increment value ---
-        final_increments = {
-            disease: quadratic_increments(df.loc[year_start, disease], df.loc[year_end, disease], len(intermediate_years) + 1)[-1]
-            for disease in df.columns
-        }
+            # Fill only intermediates using first span-1 cumulative sums
+            if span > 1:
+                cums = start_val + np.cumsum(inc)[:span - 1]
+                for y, v in zip(intermediate_years, cums):
+                    quad_dict[y][col] = v
 
-        future_years = {
-            year: extended_df.loc[year_end] + pd.Series(final_increments) * (year - year_end)
-            for year in range(year_end + 1, projected_year + 1)
-        }
-        future_df = pd.DataFrame(future_years).T
+            # Use the *average* annual increment for the linear tail
+            avg_increments[col] = (end_val - start_val) / span
 
-        # --- Step 4: Combine everything ---
-        final_df = pd.concat([extended_df, future_df])
+        interpolated_df = pd.DataFrame(quad_dict).T if intermediate_years else pd.DataFrame(index=[], columns=df.columns)
 
-        # Ensure index is integer
+        # --- Combine start, intermediates, ORIGINAL end ---
+        pieces = [df.loc[[year_start]]]
+        if not interpolated_df.empty:
+            pieces.append(interpolated_df)
+        pieces.append(df.loc[[year_end]])
+        extended_df = pd.concat(pieces, axis=0)
+
+        # --- Linear tail using the SAME average annual increment ---
+        if projected_year > year_end:
+            future_years = range(year_end + 1, projected_year + 1)
+            future_rows = {
+                y: extended_df.loc[year_end] + pd.Series(avg_increments) * (y - year_end)
+                for y in future_years
+            }
+            future_df = pd.DataFrame(future_rows).T
+            final_df = pd.concat([extended_df, future_df], axis=0)
+        else:
+            final_df = extended_df.loc[:projected_year]
+
+        # Clean index
         final_df.index = final_df.index.astype(int)
         final_df = final_df.sort_index()
 
         return final_df
+
+
+
 
 
     def transform_country_disease_new(self, df, country):

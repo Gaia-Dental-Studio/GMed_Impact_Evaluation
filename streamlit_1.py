@@ -8,6 +8,7 @@ from model import Model
 # Load JSON configuration
 with open('parameters.json') as f:
     CONFIG = json.load(f)
+    
 
 def load_data():
     prevalence_data = pd.read_csv('indonesia_ncd_prevalence_cleaned.csv', index_col=0)

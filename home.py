@@ -1,7 +1,7 @@
 import streamlit as st 
 
-import streamlit_1 as indonesia_model
-import streamlit_2 as worldwide_model
+import streamlit_1
+# import streamlit_2 as worldwide_model
 
 
 # NOTE: Please open streamlit_1.py for the code to run the Indonesia model
@@ -11,7 +11,7 @@ import streamlit_2 as worldwide_model
 st.title('Size of the Problem and What We can Do Collectively')
 
 
-indonesia_model.app()
+streamlit_1.app()
 
 
 # options = ["Indonesia", "Worldwide"]

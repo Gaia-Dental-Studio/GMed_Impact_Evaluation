@@ -18,7 +18,7 @@ provinces_data["Population"] = provinces_data["Population"].fillna("0").str.repl
 
 # Load data worldwide
 
-world_data = pd.read_csv('world_data_cleaned_new.csv')
+world_data = pd.read_csv('world_data_cleaned_new_2.csv')
 
 # Model instance (only for pictogram use later if extended)
 model = Model()
@@ -134,8 +134,9 @@ def predict_worldwide():
 
     selected_dataframe = world_data[(world_data['Country'] == selected_country) & (world_data['Disease'] == selected_disease)]
 
+    # print(selected_dataframe.to_string())
 
-    population = selected_dataframe['Population'].values[0]
+    # population = selected_dataframe['Population'].values[0]
     old_population_all = selected_dataframe['Population 40+'].values[0] 
     economic_burden_selected = economic_burden_transformed[selected_disease].loc[select_year]
     prevalence_selected = selected_dataframe['Prevalence % 40+'].values[0]
@@ -151,6 +152,8 @@ def predict_worldwide():
 
     # undiagnosed ratio is values of row in selected_dataframe given selected_disease and selected_country, extract values[0]
     undiagnosed_ratio = selected_dataframe['% Undiagnosed Susceptible Population 40+'].values[0]
+    
+
 
     susceptible_population_diagnosed = susceptible_population * (1 - undiagnosed_ratio)
     susceptible_population_undiagnosed = susceptible_population * undiagnosed_ratio
